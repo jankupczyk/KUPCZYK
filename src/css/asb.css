@@ -163,11 +163,6 @@ body.accessibility_tts #accessibilityBar button[data-accessibility=tts] {
     color: #fff !important
 }
 
-body.accessibility_flash #accessibilityBar button[data-accessibility=flash] {
-    background-color: #ed1c24;
-    color: #fff !important
-}
-
 body.accessibility_readingLine #readingLine {
     background-color: #ed1c24 !important;
     opacity: 1;
@@ -193,19 +188,6 @@ body.accessibility_markerLine #markerLine {
     transform: translateY(-1rem);
     mix-blend-mode: color
 }
-
-body.accessibility_flash{
-    cursor: none;
-    --cursorX: 50vw;
-    --cursorY: 50vh;
-    filter: brightness(150%);
-    width: 100vw;
-    position: absolute;
-    z-index: 9999;
-    transform: translateY(-1rem);
-    mix-blend-mode: color;
-}
-
 
 body.accessibility_markerLine.contrast #markerLine {
     mix-blend-mode: multiply;

@@ -93,17 +93,17 @@
 		var typed_strings = $('.text-slider-items').text();
 		var typed = new Typed('.text-slider', {
 			strings: typed_strings.split(','),
-			typeSpeed: 80,
+			typeSpeed: 90,
 			loop: true,
-			backDelay: 1100,
-			backSpeed: 30
+			backDelay: 500,
+			backSpeed: 25
 		});
 	}
 
 	$('#testimonial-mf').owlCarousel({
 		margin: 20,
 		autoplay: true,
-		autoplayTimeout: 4000,
+		autoplayTimeout: 5000,
 		autoplayHoverPause: true,
 		responsive: {
 			0: {
@@ -120,7 +120,7 @@ $(function () {
 	function animateTitle(newTitle) {
 		var currentState = false;
 		origTitle = document.title;
-		animatedTitle ="VISIT ME 😔";
+		animatedTitle ="I'm still here 😔";
 		timer = setInterval(startAnimation, 3000);
 
 		function startAnimation() {

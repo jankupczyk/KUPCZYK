@@ -13,7 +13,7 @@ h6 {
   color: #2d2d2d;
 }
 
-.SM-cont{
+.SM-cont {
   text-align: center;
 }
 
@@ -55,6 +55,17 @@ a:hover {
 .box-shadow-a,
 .button:hover {
   box-shadow: 0 0 0 4px #cde1f8;
+}
+
+.counter {
+  transition: 0.4s ease-in-out;
+  transform: scale3d(15);
+}
+
+.counter:hover {
+  transition: 0.4s ease-in-out;
+  transition-property: inherit;
+  color: crimson;
 }
 
 .display-5 {
@@ -316,7 +327,7 @@ a:hover {
   transition: 0.6 ease-in-out;
 }
 
-.back-to-top:hover{
+.back-to-top:hover {
   transition: 0.6 ease-in-out;
   transform: scale(0.90);
   opacity: 70%;
@@ -352,11 +363,11 @@ a:hover {
   animation: animate-preloader 1s linear infinite;
 }
 
-#LI{
+#LI {
   color: #0078ff;
 }
 
-#TW{
+#TW {
   color: #00ACEE;
 }
 
@@ -494,7 +505,12 @@ a:hover {
 .navbar-b .navbar-brand {
   color: #fff;
   font-size: 1.6rem;
-  font-weight: 600;
+  font-weight: 800;
+  letter-spacing: unset;
+  text-transform: uppercase;
+  font-family: monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .navbar-b .navbar-nav .dropdown-item.show .dropdown-menu,
@@ -656,6 +672,15 @@ a:hover {
 
 .about-mf .about-img img {
   margin-left: 10px;
+  border: 2px solid crimson;
+  transition: 0.5s ease-in-out;
+}
+
+.about-mf .about-img img:hover {
+  -webkit-box-shadow: 0px 0px 10px 5px crimson;
+  -moz-box-shadow: 0px 0px 10px 5px crimson;
+  box-shadow: 0px 0px 10px 5px crimson;
+  transition: 0.5s ease-in-out;
 }
 
 .skill-mf span {
@@ -745,6 +770,7 @@ a:hover {
   font-size: 2rem;
   margin-bottom: 0;
 }
+
 .work-box {
   margin-bottom: 3rem;
   -webkit-backface-visibility: hidden;
@@ -1048,6 +1074,19 @@ footer .credits a {
   padding: 15px;
   font-weight: 600;
   margin-bottom: 15px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: crimson;
 }
 
 #errormessage {

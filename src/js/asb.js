@@ -74,13 +74,13 @@
       iconClass: ["fa", "fa-commenting"],
       text: "Text to speech",
     },
-    btnFlashlight: {
+    btnMobile: {
       active: true,
-      dataAccessibility: "flash",
+      dataAccessibility: "mobile",
       class: "setAccessibility",
       icon: "FontAwesome",
-      iconClass: ["fa", "fa-bullseye"],
-      text: "Flashlight",
+      iconClass: ["fa", "fa-mobile"],
+      text: "Mobile",
     },
   }
 
@@ -198,9 +198,8 @@
       case "markerLine":
         body.classList.toggle("accessibility_markerLine");
         break;
-      case "flash":
-        body.classList.toggle("accessibility_flash");
-        break;
+      case "mobile":
+        location.reload(true);
       case "reset":
         Dark.currentState === true ? Dark.setState(false) : null;
         Contrast.currentState === true ? Contrast.setState(false) : null;
@@ -229,7 +228,7 @@
         );
         window.speechSynthesis.speak(msg4);
         const msg5 = new SpeechSynthesisUtterance(
-          "[In the skills section: WEB DEVELOPMENT Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.]"
+          "[In the skills section: WEB DEVELOPMENT General knowledge about building websites, knowledge of languages ​​such as JS, css, Sass, html.]"
         );
         window.speechSynthesis.speak(msg5);
         const msg6 = new SpeechSynthesisUtterance(
@@ -261,7 +260,7 @@
         );
         window.speechSynthesis.speak(msg12);
         const msg13 = new SpeechSynthesisUtterance(
-          "[In the work section second internship - Santander bank Polska, IT Services, Monitoring, Internship, March two thousand and twentieth to April two thousand and twentieth]"
+          "[In the work section second internship - Banco Santander, IT Services, Monitoring, Internship, March two thousand and twentieth to April two thousand and twentieth]"
         );
         window.speechSynthesis.speak(msg13);
         const msg14 = new SpeechSynthesisUtterance(
