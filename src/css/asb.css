@@ -104,7 +104,9 @@
 }
 
 #accessibilityBar button.setAccessibility:hover {
-    background-color: #fff
+    background-color: rgb(153, 153, 153);
+    filter: opacity(95%);
+    transform: scale(0.97);
 }
 
 #accessibilityBar button.setAccessibility strong {

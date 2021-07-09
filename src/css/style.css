@@ -175,9 +175,9 @@ a:hover {
 .title-left:before {
   content: '';
   position: absolute;
-  height: 3px;
-  background-color: black;
-  width: 100px;
+  height: 5px;
+  background-color: crimson;
+  width: 50%;
   bottom: -12px;
 }
 
@@ -265,7 +265,7 @@ a:hover {
 }
 
 .owl-theme .owl-dots .owl-dot span {
-  width: 18px;
+  width: 25px;
   height: 7px;
   margin: 5px 5px;
   background: #cde1f8;
@@ -280,7 +280,7 @@ a:hover {
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
-  background-color: #1B1B1B;
+  background-color: crimson;
   width: 25px;
 }
 
@@ -506,7 +506,7 @@ a:hover {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 800;
-  letter-spacing: unset;
+  letter-spacing: 4px;
   text-transform: uppercase;
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
