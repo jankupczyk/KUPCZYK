@@ -506,7 +506,7 @@ a:hover {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 800;
-  letter-spacing: 4px;
+  letter-spacing: 4px; 
   text-transform: uppercase;
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
