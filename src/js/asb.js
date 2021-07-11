@@ -220,6 +220,7 @@
         body.classList.remove("accessibility_markerLine");
         body.classList.remove("accessibility_tts");
         body.classList.remove("accessibility_links");
+        body.style.textDecoration = 'none';
         break;
       case "tts":
         body.classList.toggle("accessibility_tts");

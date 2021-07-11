@@ -1079,12 +1079,12 @@ footer .credits a {
 }
 
 body::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0.4rem;
 }
 
 body::-webkit-scrollbar-track {
   background: #2d2d2d;
-  width: 0.8rem;
+  width: 0.4rem;
 }
 
 body::-webkit-scrollbar-thumb {
