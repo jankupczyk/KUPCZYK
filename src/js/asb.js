@@ -58,6 +58,14 @@
       iconClass: ["fa", "fa-bookmark"],
       text: "Reading Line",
     },
+    btnLinks: {
+      active: true,
+      dataAccessibility: "links",
+      class: "setAccessibility",
+      icon: "FontAwesome",
+      iconClass: ["fa", "fa-underline"],
+      text: "Underline",
+    },
     btnReset: {
       active: true,
       dataAccessibility: "reset",
@@ -198,6 +206,10 @@
       case "markerLine":
         body.classList.toggle("accessibility_markerLine");
         break;
+      case "links":
+        body.classList.toggle("accessibility_links");
+        body.style.textDecoration = 'underline';
+        break;
       case "mobile":
         location.reload(true);
       case "reset":
@@ -207,7 +219,7 @@
         body.classList.remove("accessibility_readingLine");
         body.classList.remove("accessibility_markerLine");
         body.classList.remove("accessibility_tts");
-        body.classList.remove("accessibility_flash");
+        body.classList.remove("accessibility_links");
         break;
       case "tts":
         body.classList.toggle("accessibility_tts");

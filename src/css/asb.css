@@ -165,6 +165,11 @@ body.accessibility_tts #accessibilityBar button[data-accessibility=tts] {
     color: #fff !important
 }
 
+body.accessibility_links #accessibilityBar button[data-accessibility=links] {
+    background-color: #ed1c24;
+    color: #fff !important
+}
+
 body.accessibility_readingLine #readingLine {
     background-color: #ed1c24 !important;
     opacity: 1;
