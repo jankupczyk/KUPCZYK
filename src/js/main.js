@@ -120,7 +120,7 @@ $(function () {
 	function animateTitle(newTitle) {
 		var currentState = false;
 		origTitle = document.title;
-		animatedTitle ="I'm still here 😔";
+		animatedTitle = "I'm still here 😔";
 		timer = setInterval(startAnimation, 3000);
 
 		function startAnimation() {
@@ -143,3 +143,16 @@ $(function () {
 	});
 
 });
+
+$(document).ready(function () {
+	$("#inputed").on("keyup", function () {
+		let value = $(this).val().toLowerCase();
+		$("#FRs").filter(function () {
+			$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+		});
+	});
+});
+
+function resumeon() {
+	document.write("<div style='color: #6c757d; text-align: center; padding: 15px; font-weight: 800; font-size: 25px;'> <h1 style='font-size: 55; color: black;'>404</h1> <br> Ooops!!   There's nothing to see here</div > ");
+}

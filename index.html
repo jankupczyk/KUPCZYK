@@ -481,13 +481,54 @@
               Projects
             </h3>
             <p class="subtitle-a">
-              All my latest projects🤓
+              All my latest projects 🤓
             </p>
             <div class="line-mf"></div>
+            <br>
+            <input type="text" id="inputed" class="form-control" placeholder="Search">
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="FRs">
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a><img src="public/assets/photos/webp/pr5.webp" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">Game Development</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="https://jankupczyk.github.io/CS-GO-Message-Generator/" target="_blank"
+                  rel="noopener noreferrer nofollw" id="card">Message generator</a></h3>
+              <p class="card-description">
+                Simple message generator
+                <br><br>
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="https://github.com/jankupczyk" target="_blank" rel="noopener noreferrer nofollw">
+                  <img src="public/assets/photos/webp/ghme.webp" alt="" class="avatar rounded-circle">
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 5 min
+                &nbsp;
+                <span class="ion-ios-calendar-outline"></span> 26/06/2021
+                &nbsp;
+                <span class="devicon-html5-plain colored" title="HTML5"></span>
+                &nbsp;
+                <span class="devicon-jquery-plain colored" title="JQ"></span>
+                &nbsp;
+                <span class="devicon-javascript-plain colored" title="JS"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
@@ -526,6 +567,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
@@ -616,6 +658,7 @@
                   rel="noopener noreferrer nofollw">PYTHON</a></h3>
               <p class="card-description">
                 Simple programs written in 🐍PYTHON🐍
+                <br><br>
               </p>
             </div>
             <div class="card-footer">
@@ -647,7 +690,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12" id="resume">
-          <center><a href="" class="button button-a button-big button-rouded">RESUME</a></center>
+          <center><a class="button button-a button-big button-rouded" onclick="resumeon()">RESUME</a></center>
           <br>
         </div>
       </div>
