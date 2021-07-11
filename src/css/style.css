@@ -506,7 +506,7 @@ a:hover {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 800;
-  letter-spacing: 4px; 
+  letter-spacing: 4px;
   text-transform: uppercase;
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
@@ -727,6 +727,8 @@ a:hover {
   color: #fff;
   background-color: crimson;
   box-shadow: 0 0 0 10px #cde1f8;
+  -webkit-animation: breath 5s ease-out infinite normal;
+  animation: breath 3s ease-out infinite normal;
 }
 
 .service-box .service-ico {
@@ -1251,5 +1253,53 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 15px;
+  }
+}
+
+@-webkit-keyframes breath {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes breath {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
   }
 }
