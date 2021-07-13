@@ -120,7 +120,7 @@ $(function () {
 	function animateTitle(newTitle) {
 		var currentState = false;
 		origTitle = document.title;
-		animatedTitle = "I'm still here 😔";
+		animatedTitle = origTitle + " - I'm still here 😔";
 		timer = setInterval(startAnimation, 3000);
 
 		function startAnimation() {

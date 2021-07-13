@@ -50,6 +50,10 @@
     cursor: pointer
 }
 
+#universalAccessBtn:hover{
+    opacity: 95%; 
+}
+
 #accessibilityBar button#universalAccessBtn span {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;

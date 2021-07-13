@@ -502,6 +502,22 @@ a:hover {
   background-color: #1B1B1B;
 }
 
+.navbar-b.navbar-reduce .navbar-toggler .navbar-M {
+  color: #1B1B1B;
+}
+
+.navbar-M {
+  color: #fff;
+  position: relative;
+  top: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
 .navbar-b .navbar-brand {
   color: #fff;
   font-size: 1.6rem;
@@ -554,7 +570,7 @@ a:hover {
   display: block;
   background-color: #fff;
   height: 3px;
-  width: 25px;
+  width: 30px;
   margin-top: 4px;
   margin-bottom: 4px;
   -webkit-transform: rotate(0deg);
@@ -574,23 +590,23 @@ a:hover {
   position: absolute;
   left: 12px;
   top: 10px;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
+  -webkit-transform: rotate(145deg);
+  transform: rotate(145deg);
   opacity: 0.9;
 }
 
 .navbar-toggler:not(.collapsed) span:nth-child(2) {
-  height: 12px;
-  visibility: hidden;
-  background-color: transparent;
+  position: absolute;
+  left: 12px;
+  top: 10px;
 }
 
 .navbar-toggler:not(.collapsed) span:nth-child(3) {
   position: absolute;
   left: 12px;
   top: 10px;
-  -webkit-transform: rotate(-135deg);
-  transform: rotate(-135deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
   opacity: 0.9;
 }
 
