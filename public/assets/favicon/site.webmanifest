@@ -1,12 +1,23 @@
 {
-    "lang":"EN",
-    "dir":"ltr",
+    "lang": "EN",
+    "dir": "ltr",
     "name": "K U P C Z Y K",
     "short_name": "KK",
+    "categories": ["CV", "RESUME", "work", "job", "website"],
     "start_url": "/",
     "display": "standalone",
     "theme_color": "crimson",
     "background_color": "#cde1f8",
+    "orientation": "any",
+    "protocol_handlers": [{
+            "protocol": "web+jngl",
+            "url": ""
+        },
+        {
+            "protocol": "web+jnglstore",
+            "url": ""
+        }
+    ],
     "description": "Hi, I'm Janek, I'm 20 years old and I'm an IT specialist, I like to make new friends and work with them, I'm interested in new technologies, travel, politics, sports, and games.",
     "icons": [{
         "src": "../../assets/favicon/png/favicon-16x16.png",
