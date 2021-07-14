@@ -249,7 +249,7 @@
         );
         window.speechSynthesis.speak(msg6);
         const msg7 = new SpeechSynthesisUtterance(
-          "[In the skills section: NETWORKING Knowledge of general network operation, obtained certificates CCNA R&S: Introduction to Networks and CCNA R&S: Routing and Switching Essentials.]"
+          "[In the skills section: NETWORKING Knowledge of general network operation (plas MiktroTik), obtained certificates CCNA R&S: Introduction to Networks and CCNA R&S: Routing and Switching Essentials.]"
         );
         window.speechSynthesis.speak(msg7);
         const msg8 = new SpeechSynthesisUtterance(
@@ -300,6 +300,14 @@
           "[Visit my twitter account]"
         );
         window.speechSynthesis.speak(msg19);
+        const msg20 = new SpeechSynthesisUtterance(
+          "[Projects]"
+        );
+        window.speechSynthesis.speak(msg20);
+        const msg21 = new SpeechSynthesisUtterance(
+          "[All my latest projects] [Search bar] [resume, message generator, kawaleria rp, zombioo, MyConv, python]"
+        );
+        window.speechSynthesis.speak(msg21);
       default:
         break;
     }

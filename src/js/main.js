@@ -152,7 +152,3 @@ $(document).ready(function () {
 		});
 	});
 });
-
-function resumeon() {
-	document.write("<div style='color: #6c757d; text-align: center; padding: 15px; font-weight: 800; font-size: 25px;'> <h1 style='font-size: 55; color: black;'>404</h1> <br> Ooops!!   There's nothing to see here</div > ");
-}
