@@ -1,6 +1,13 @@
 function BSsmbtn() {
     Swal.fire({
         title: '<strong>Banco Santander</strong>',
+        backdrop: `
+        rgba(0, 0, 0, 1);
+      `,
+        imageUrl: '../../public/assets/photos/webp/santander.webp',
+        imageWidth: 80,
+        imageHeight: 80,
+        imageAlt: 'Banco Santander',
         html:
             '<ul>BRIDGE:</ul>' +
             '<li>REMEDY</li>' +
@@ -28,6 +35,13 @@ function BSsmbtn() {
 function HTsmbtn() {
     Swal.fire({
         title: '<strong>Hardsoft-Telekom</strong>',
+        backdrop: `
+        rgba(0, 0, 0, 1);
+      `,
+        imageUrl: '../../public/assets/photos/webp/hardsoft.webp',
+        imageWidth: 80,
+        imageHeight: 80,
+        imageAlt: 'Hardsoft-Telekom',
         html:
             '<ul>Service:</ul>' +
             '<li>Repair and diagnostics of computers</li>' +
@@ -41,7 +55,7 @@ function HTsmbtn() {
 function resumeon() {
     Swal.fire({
         icon: 'error',
-        title: 'Oops...',
+        title: '404',
         text: "Currently there's nothing to see here!",
     })
 }

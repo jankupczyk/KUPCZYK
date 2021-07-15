@@ -379,6 +379,7 @@ a:hover {
   color: #fff;
   font-size: 1em;
   display: flex;
+  cursor: pointer;
 }
 
 @-webkit-keyframes animate-preloader {
