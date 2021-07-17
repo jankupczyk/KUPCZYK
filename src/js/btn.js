@@ -4,7 +4,7 @@ function BSsmbtn() {
         backdrop: `
         rgba(0, 0, 0, 1);
       `,
-        imageUrl: '../../public/assets/photos/webp/santander.webp',
+        imageUrl: 'public/assets/photos/webp/santander.webp',
         imageWidth: 80,
         imageHeight: 80,
         imageAlt: 'Banco Santander',
@@ -38,7 +38,7 @@ function HTsmbtn() {
         backdrop: `
         rgba(0, 0, 0, 1);
       `,
-        imageUrl: '../../public/assets/photos/webp/hardsoft.webp',
+        imageUrl: 'public/assets/photos/webp/hardsoft.webp',
         imageWidth: 80,
         imageHeight: 80,
         imageAlt: 'Hardsoft-Telekom',
