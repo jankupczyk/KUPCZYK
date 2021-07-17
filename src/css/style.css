@@ -372,10 +372,12 @@ a:hover {
 }
 
 #IG {
-  background: linear-gradient( #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-  border-radius: 45%;
-  height: 29px;
+  background: linear-gradient( #405de6, #5851db, #833ab4, #c13584, #e1306c, #faf18f, #fdf497, #fd1d1d);
+  border-radius: 30%;
+  height: 29px; 
 }
+
+
 
 .general-centered-BTN {
   border: 0;
