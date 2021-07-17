@@ -114,36 +114,6 @@
 
 })(jQuery);
 
-$(function () {
-	var origTitle, animatedTitle, timer;
-
-	function animateTitle(newTitle) {
-		var currentState = false;
-		origTitle = document.title;
-		animatedTitle = origTitle + " - I'm still here 😔";
-		timer = setInterval(startAnimation, 3000);
-
-		function startAnimation() {
-			document.title = currentState ? origTitle : animatedTitle;
-			currentState = !currentState;
-		}
-	}
-
-	function restoreTitle() {
-		clearInterval(timer);
-		document.title = origTitle;
-	}
-
-	$(window).blur(function () {
-		animateTitle();
-	});
-
-	$(window).focus(function () {
-		restoreTitle();
-	});
-
-});
-
 $(document).ready(function () {
 	$("#inputed").on("keyup", function () {
 		let value = $(this).val().toLowerCase();

@@ -371,6 +371,12 @@ a:hover {
   color: #00ACEE;
 }
 
+#IG {
+  background: linear-gradient( #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  border-radius: 45%;
+  height: 29px;
+}
+
 .general-centered-BTN {
   border: 0;
   border-radius: .25em;
@@ -1085,6 +1091,7 @@ footer {
 
 footer .copyright {
   margin-bottom: .3rem;
+  font-size: 12px;
 }
 
 footer .credits {
