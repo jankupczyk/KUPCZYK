@@ -5,8 +5,8 @@ function BSsmbtn() {
         rgba(0, 0, 0, 1);
       `,
         imageUrl: 'public/assets/photos/webp/santander.webp',
-        imageWidth: 80,
-        imageHeight: 80,
+        imageWidth: 90,
+        imageHeight: 90,
         imageAlt: 'Banco Santander',
         html:
             '<ul>BRIDGE:</ul>' +
@@ -39,8 +39,8 @@ function HTsmbtn() {
         rgba(0, 0, 0, 1);
       `,
         imageUrl: 'public/assets/photos/webp/hardsoft.webp',
-        imageWidth: 80,
-        imageHeight: 80,
+        imageWidth: 90,
+        imageHeight: 90,
         imageAlt: 'Hardsoft-Telekom',
         html:
             '<ul>Service:</ul>' +

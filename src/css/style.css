@@ -372,9 +372,11 @@ a:hover {
 }
 
 #IG {
-  background: linear-gradient( #405de6, #5851db, #833ab4, #c13584, #e1306c, #faf18f, #fdf497, #fd1d1d);
+  color: white;
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
   border-radius: 30%;
-  height: 29px; 
+  height: 31.7px;
+  width: 32px;
 }
 
 
@@ -541,7 +543,7 @@ a:hover {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 800;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   text-transform: uppercase;
   font-family: monospace;
   -webkit-font-smoothing: antialiased;
