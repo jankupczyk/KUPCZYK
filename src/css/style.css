@@ -106,6 +106,7 @@ a:hover {
   height: 100%;
   width: 100%;
   opacity: .7;
+  zoom: 25%;
 }
 
 .paralax-mf {
@@ -640,6 +641,7 @@ a:hover {
 .intro .intro-content {
   text-align: center;
   position: absolute;
+  zoom: 50%;
 }
 
 .intro .overlay-itro {
