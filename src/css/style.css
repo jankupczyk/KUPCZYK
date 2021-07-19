@@ -667,8 +667,8 @@ a:hover {
   position: relative;
   top: 15px;
   text-transform: uppercase;
+  font-weight: 800;
   letter-spacing: 2px;
-  font-size: 25px !important;
   font-family: OGV;
 }
 
