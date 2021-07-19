@@ -1,3 +1,8 @@
+@font-face {
+  font-family: OGV;
+  src: url(../../public/assets/font/OGV.ttf);
+}
+
 body {
   background-color: #f5f5f5;
   color: #2d2d2d;
@@ -380,7 +385,7 @@ a:hover {
   width: 32px;
 }
 
-#EM{
+#EM {
   color: #26ace9;
 }
 
@@ -548,7 +553,7 @@ a:hover {
   font-weight: 800;
   letter-spacing: 5px;
   text-transform: uppercase;
-  font-family: monospace;
+  font-family: OGV;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -659,8 +664,13 @@ a:hover {
 
 .intro .intro-title {
   color: #fff;
-  font-weight: 600;
-  font-size: 3rem;
+  position: relative;
+  top: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-family: OGV;
 }
 
 .intro .intro-subtitle {
