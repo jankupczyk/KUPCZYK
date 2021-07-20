@@ -544,7 +544,8 @@
     font-weight: 400;
     line-height: normal;
     word-wrap: break-word;
-    word-break: break-word
+    word-break: break-word;
+    text-align: center;
 }
 
 .swal2-checkbox,

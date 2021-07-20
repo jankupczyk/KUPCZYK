@@ -59,3 +59,39 @@ function resumeon() {
         text: "Currently there's nothing to see here!",
     })
 }
+
+function cvon() {
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+    })
+
+    swalWithBootstrapButtons.fire({
+        title: 'Are you sure?',
+        text: "The file will be downloaded to your computer!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: '<a href="public/assets/xYYYL/CV/Jan-Kupczyk-CV.pdf" download>YES',
+        cancelButtonText: 'NO',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            swalWithBootstrapButtons.fire(
+                'Downloading file!',
+                '<b>Jan-Kupczyk-CV.pdf</b> file has been downloaded.',
+                'success'
+            )
+        } else if (
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            swalWithBootstrapButtons.fire(
+                'Cancelled',
+                '',
+                'error'
+            )
+        }
+    })
+}
