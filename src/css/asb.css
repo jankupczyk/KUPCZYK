@@ -316,7 +316,6 @@ body.darkmode section,
 body.darkmode main,
 body.darkmode aside,
 body.darkmode article {
-    background: #121212 !important;
     color: #655b5b !important
 }
 
