@@ -1,9 +1,7 @@
 function BSsmbtn() {
     Swal.fire({
         title: '<strong>Banco Santander</strong>',
-        backdrop: `
-        rgba(0, 0, 0, 1);
-      `,
+        backdrop: `rgba(0, 0, 0, 1);`,
         imageUrl: 'public/assets/photos/webp/santander.webp',
         imageWidth: 90,
         imageHeight: 90,
@@ -80,8 +78,8 @@ function cvon() {
     }).then((result) => {
         if (result.isConfirmed) {
             swalWithBootstrapButtons.fire(
-                'Downloading file!',
-                '<b>Jan-Kupczyk-CV.pdf</b> file has been downloaded.',
+                'Downloading file...',
+                '<b>Jan-Kupczyk-CV.pdf</b> file has been downloaded! <br><br> <p>Check your "Downloads" folder</p>',
                 'success'
             )
         } else if (
