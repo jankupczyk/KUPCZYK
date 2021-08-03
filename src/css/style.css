@@ -9,6 +9,20 @@ body {
   margin: 0 auto;
 }
 
+.count-t {
+  color: #fff;
+  text-align: center;
+  font-size: 25px !important;
+  letter-spacing: -1px;
+}
+
+.count {
+  color: #fff;
+  text-align: center;
+  font-size: 30px !important;
+  letter-spacing: 2px; 
+}
+
 h1,
 h2,
 h3,
@@ -1236,7 +1250,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .box-shadow-full {
     padding: 3rem;
   }
