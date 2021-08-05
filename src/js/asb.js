@@ -225,7 +225,7 @@
       case "tts":
         body.classList.toggle("accessibility_tts");
         const msg = new SpeechSynthesisUtterance(
-          "Hello I'm TTS bot, I'll read the text for you!! [In the navbar: , Kupczyk, HOME, ABOUT, SKILLS, WORK, PROJECTS, RESUME]"
+          "Hello I'm TTS bot, I'll read the text for you!! [In the navbar: , Kupczyk, HOME, ABOUT, SKILLS, WORK, PROJECTS, SHOP, RESUME]"
         );
         window.speechSynthesis.speak(msg);
         const msg2 = new SpeechSynthesisUtterance(
@@ -249,7 +249,7 @@
         );
         window.speechSynthesis.speak(msg6);
         const msg7 = new SpeechSynthesisUtterance(
-          "[In the skills section: NETWORKING Knowledge of general network operation (plas MiktroTik), obtained certificates CCNA R&S: Introduction to Networks and CCNA R&S: Routing and Switching Essentials.]"
+          "[In the skills section: NETWORKING Knowledge of general network operation (plas MikroTik), obtained certificates CCNA R&S: Introduction to Networks and CCNA R&S: Routing and Switching Essentials.]"
         );
         window.speechSynthesis.speak(msg7);
         const msg8 = new SpeechSynthesisUtterance(
@@ -301,13 +301,29 @@
         );
         window.speechSynthesis.speak(msg19);
         const msg20 = new SpeechSynthesisUtterance(
-          "[Projects]"
+          "[Visit my instagram account]"
         );
         window.speechSynthesis.speak(msg20);
         const msg21 = new SpeechSynthesisUtterance(
-          "[All my latest projects] [Search bar] [resume, message generator, kawaleria rp, zombioo, MyConv, python]"
+          "[Send me a message]"
         );
         window.speechSynthesis.speak(msg21);
+        const msg22 = new SpeechSynthesisUtterance(
+          "[Projects]"
+        );
+        window.speechSynthesis.speak(msg22);
+        const msg23 = new SpeechSynthesisUtterance(
+          "[All my latest projects] [Search bar] [resume, message generator, kawaleria rp, zombioo, MyConv, python]"
+        );
+        window.speechSynthesis.speak(msg23);
+        const msg24 = new SpeechSynthesisUtterance(
+          "[This website was viewed]"
+        );
+        window.speechSynthesis.speak(msg24);
+        const msg25 = new SpeechSynthesisUtterance(
+          "[Shop] [My humble store] [Custom website; price negotiable] [Custom website; price negotiable] [WordPress website; price negotiable [Currently disabled]]"
+        );
+        window.speechSynthesis.speak(msg25);
       default:
         break;
     }
