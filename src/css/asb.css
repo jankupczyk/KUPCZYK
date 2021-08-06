@@ -59,8 +59,8 @@
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    font-size: 18px;
-    font-size: 1rem;
+    font-size: 15px;
+    font-size: 0.8rem;
     line-height: 1;
     text-align: right;
     font-weight: bold;
