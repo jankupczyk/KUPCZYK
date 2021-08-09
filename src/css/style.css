@@ -403,7 +403,7 @@ a:hover {
   color: #26ace9;
 }
 
-.disabled-sp{
+.disabled-sp {
   color: red;
   font-size: 0.9rem;
 }
@@ -1227,6 +1227,69 @@ body::-webkit-scrollbar-thumb {
 
 .button-rouded {
   border-radius: 5rem;
+}
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 33px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 64px;
+  height: 64px;
+  border: 2px solid #fff;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bnce 3s infinite 3s;
+  animation: bnce 3s infinite 3s;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  transform: scale(1)
+}
+
+.scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid #fff;
+  border-width: 0px 0 2px 2px;
+}
+
+@keyframes bnce {
+
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 }
 
 .btn-lg {
