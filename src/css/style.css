@@ -1237,7 +1237,7 @@ body::-webkit-scrollbar-thumb {
 
 .scroll-down {
   position: absolute;
-  bottom: 33px;
+  bottom: 100px;
   left: 50%;
   margin-left: -16px;
   display: block;
