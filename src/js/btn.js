@@ -7,6 +7,7 @@ function BSsmbtn() {
         imageHeight: 90,
         imageAlt: 'Banco Santander',
         html:
+            '<span class="w-ctegory" style="color: crimson;">IT Services, Monitoring ◦Internship</span>' +
             '<ul>BRIDGE:</ul>' +
             '<li>REMEDY</li>' +
             '<li>ZABBIX</li>' +
@@ -24,7 +25,9 @@ function BSsmbtn() {
             '<ul>IT service departament:</ul>' +
             '<li>JSON</li>' +
             '<li>cURL</li>' +
-            '<li>JQ</li>',
+            '<li>JQ</li>' +
+            '<br>' +
+            '<span class="w-date" style="color: crimson; font-size: .8rem;">March 2020 - April 2020 ◂ 2 months</span>',
         focusConfirm: false,
     })
 
@@ -41,11 +44,14 @@ function HTsmbtn() {
         imageHeight: 90,
         imageAlt: 'Hardsoft-Telekom',
         html:
+            '<span class="w-ctegory" style="color: crimson;">Apprentice ◦Internship</span>' +
             '<ul>Service:</ul>' +
             '<li>Repair and diagnostics of computers</li>' +
             '<li>Server Support and Maintenance</li>' +
             '<li>Documentation of orders</li>' +
-            '<li>Test and diagnostics of the network</li>',
+            '<li>Test and diagnostics of the network</li>' +
+            '<br>' +
+            '<span class="w-date" style="color: crimson; font-size: .8rem;">May 2019 - June2019 ◂ 2 months</span>',
         focusConfirm: false,
     })
 }
