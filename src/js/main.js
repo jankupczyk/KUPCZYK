@@ -141,3 +141,16 @@ $(function () {
 		return false;
 	});
 });
+
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 800) {
+		$('#accessibilityBar button#universalAccessBtn').fadeIn('slow');
+	} else {
+		$('#accessibilityBar button#universalAccessBtn').fadeOut('slow');
+	}
+});
+
+$('#accessibilityBar button#universalAccessBtn').click(function () {
+	$('html, body').animate({ scrollTop: 0 }, 1700, 'easeInOutExpo');
+	return false;
+});

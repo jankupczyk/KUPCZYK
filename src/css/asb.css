@@ -47,7 +47,8 @@
     position: absolute;
     top: 50%;
     transform: translate(-110%, -50%);
-    cursor: pointer
+    cursor: pointer;
+    display: none;
 }
 
 #universalAccessBtn:hover{
