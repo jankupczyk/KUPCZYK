@@ -49,6 +49,7 @@
     transform: translate(-110%, -50%);
     cursor: pointer;
     display: none;
+    z-index: 11;
 }
 
 #universalAccessBtn:hover{
