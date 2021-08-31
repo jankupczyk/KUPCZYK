@@ -519,8 +519,8 @@ a:hover {
 .navbar-b.navbar-reduce {
   transition: all .5s ease-in-out;
   background-color: #fff;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .navbar-b.navbar-reduce .nav-link {
@@ -691,11 +691,13 @@ a:hover {
   font-weight: 800;
   letter-spacing: 2px;
   font-family: OGV;
+  pointer-events: none;
 }
 
 .intro .intro-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
+  pointer-events: none;
 }
 
 .intro .text-slider-items {
