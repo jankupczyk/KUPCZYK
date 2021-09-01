@@ -900,6 +900,33 @@
   <script src="src/js/asb.js"></script>
   <script src="src/js/btn.js"></script>
 
+  <!-- VANTA BIRDS lib-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+  <script>
+    VANTA.BIRDS({
+      el: "#home",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0x156bd4,
+      color1: 0xffffff,
+      color2: 0xffffff,
+      birdSize: 1.40,
+      wingSpan: 11.00,
+      speedLimit: 2.00,
+      separation: 70.00,
+      alignment: 50.00,
+      cohesion: 30.00,
+      quantity: 2.00,
+      backgroundAlpha: 0.00
+    })
+  </script>
+
   </body>
 
 </html>
