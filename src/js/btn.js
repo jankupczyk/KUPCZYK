@@ -21,6 +21,7 @@ function BSsmbtn() {
             '<li>BMC</li>' +
             '<li>List and docket of disks and tapes</li>' +
             '<li>CMDB_INFRA enumeration</li>' +
+            '<li>Telephone service support (ATM)</li>' +
             '<br>' +
             '<ul>IT service departament:</ul>' +
             '<li>JSON</li>' +
