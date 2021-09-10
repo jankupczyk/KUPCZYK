@@ -285,9 +285,9 @@ a:hover {
 }
 
 .owl-theme .owl-dots .owl-dot span {
-  width: 25px;
-  height: 7px;
-  margin: 5px 5px;
+  width: 27px;
+  height: 5px;
+  margin: 6px 6px;
   background: #cde1f8;
   border: 0px solid #cde1f8;
   display: block;
@@ -301,7 +301,8 @@ a:hover {
 
 .owl-theme .owl-dots .owl-dot.active span {
   background-color: crimson;
-  width: 25px;
+  width: 20px;
+  height: 5px;
 }
 
 .scrolltop-mf {
