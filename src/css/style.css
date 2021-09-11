@@ -499,7 +499,7 @@ a:hover {
 .navbar-b.navbar-reduce .active>.nav-link:before,
 .navbar-b.navbar-reduce .nav-link.show:before,
 .navbar-b.navbar-reduce .nav-link.active:before {
-  width: 35px;
+  width: 40px;
 }
 
 .navbar-b.navbar-trans .nav-link:before {
@@ -520,8 +520,8 @@ a:hover {
 .navbar-b.navbar-reduce {
   transition: all .5s ease-in-out;
   background-color: #fff;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 }

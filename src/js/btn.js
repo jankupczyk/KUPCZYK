@@ -79,7 +79,7 @@ function cvon() {
         text: "The file will be downloaded to your computer!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: '<a href="" download>YES',
+        confirmButtonText: 'YES',
         cancelButtonText: 'NO',
         reverseButtons: true
     }).then((result) => {
