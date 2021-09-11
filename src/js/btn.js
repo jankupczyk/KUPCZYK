@@ -79,7 +79,7 @@ function cvon() {
         text: "The file will be downloaded to your computer!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonText: '<a href="public/assets/xYYYL/CV/Jan-Kupczyk-CV.pdf" download>YES',
+        confirmButtonText: '<a href="" download>YES',
         cancelButtonText: 'NO',
         reverseButtons: true
     }).then((result) => {
