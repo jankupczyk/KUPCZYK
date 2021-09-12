@@ -301,7 +301,7 @@ a:hover {
 
 .owl-theme .owl-dots .owl-dot.active span {
   background-color: crimson;
-  width: 20px;
+  width: 19px;
   height: 5px;
 }
 
@@ -1248,7 +1248,7 @@ body::-webkit-scrollbar-thumb {
   display: block;
   width: 64px;
   height: 64px;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   background-size: 14px auto;
   border-radius: 50%;
   z-index: 2;
@@ -1268,7 +1268,7 @@ body::-webkit-scrollbar-thumb {
   width: 12px;
   height: 12px;
   content: "";
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   border-width: 0px 0 2px 2px;
 }
 
