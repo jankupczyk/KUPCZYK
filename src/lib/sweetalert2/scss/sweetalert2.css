@@ -354,7 +354,7 @@
     max-width: 100%;
     margin: 0;
     padding: .8em 1em 0;
-    color: #595959;
+    color: black;
     font-size: 1.875em;
     font-weight: 600;
     text-align: center;
@@ -539,9 +539,8 @@
     justify-content: center;
     margin: 0;
     padding: 1em 1.6em .3em;
-    color: #545454;
-    font-size: 1.125em;
-    font-weight: 400;
+    color: black;
+    font-weight: 600;
     line-height: normal;
     word-wrap: break-word;
     word-break: break-word;
