@@ -29,10 +29,8 @@
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 100) {
 			$('.back-to-top').fadeIn('slow');
-			$('.cookie-choices').fadeIn('slow');
 		} else {
 			$('.back-to-top').fadeOut('slow');
-			$('.cookie-choices').fadeOut('slow');
 		}
 	});
 	$('.back-to-top').click(function () {

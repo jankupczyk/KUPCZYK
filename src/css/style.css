@@ -330,28 +330,6 @@ a:hover {
   transition: 0.6 ease-in-out;
 }
 
-.cookie-choices {
-  position: fixed;
-  background: transparent;
-  display: none;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  line-height: 1;
-  font-size: 15pt;
-  left: 15px;
-  bottom: 15px;
-  transition: background 0.5s;
-  z-index: 11;
-  transition: 0.6 ease-in-out;
-  padding: 1px 1px;
-}
-
-.cookie-choices:hover{
-  transform: rotate(360deg);
-  transition: 0.6 ease-in-out;
-}
-
 .back-to-top {
   position: fixed;
   display: none;
