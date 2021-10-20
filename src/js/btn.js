@@ -57,14 +57,6 @@ function HTsmbtn() {
     })
 }
 
-function resumeon() {
-    Swal.fire({
-        icon: 'error',
-        title: '404',
-        text: "Currently there's nothing to see here!",
-    })
-}
-
 function cvon() {
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
@@ -85,11 +77,12 @@ function cvon() {
     }).then((result) => {
         if (result.isConfirmed) {
             swalWithBootstrapButtons.fire(
-                'Downloading file...',
-                '<b>Jan-Kupczyk-CV.pdf</b> file has been downloaded! <br><br> <p>Check your "Downloads" folder</p>',
-                'success'
+                'Select CV language',
+                '<select name="lang" id="" class="Select-button"> <option value="pl" class="Polish">Polish  🇵🇱</option> <option value="en" class="English">English  🇬🇧</option> </select>',
+                '</select>'
             )
-        } else if (
+        }
+        else if (
             result.dismiss === Swal.DismissReason.cancel
         ) {
             swalWithBootstrapButtons.fire(

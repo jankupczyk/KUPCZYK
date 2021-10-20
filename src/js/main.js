@@ -154,3 +154,18 @@ $(window).scroll(function () {
 		$('#accessibilityBar button#universalAccessBtn').fadeOut('slow');
 	}
 });
+
+function search_bar_wrk() {
+	let input = document.getElementById('inputed').value
+	input = input.toLowerCase();
+	let x = document.getElementsByClassName('card card-blog');
+
+	for (i = 0; i < x.length; i++) {
+		if (!x[i].innerHTML.toLowerCase().includes(input)) {
+			x[i].style.display = "none";
+		}
+		else {
+			x[i].style.display = "list-item";
+		}
+	}
+}

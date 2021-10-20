@@ -203,7 +203,7 @@
       case "readingLine":
         body.classList.toggle("accessibility_readingLine");
         break;
-      case "markerLine":
+      case "markerLine":    
         body.classList.toggle("accessibility_markerLine");
         break;
       case "links":
@@ -212,6 +212,7 @@
         break;
       case "mobile":
         location.reload(true);
+        viewportid.setAttribute.remove("desktop")
       case "reset":
         Dark.currentState === true ? Dark.setState(false) : null;
         Contrast.currentState === true ? Contrast.setState(false) : null;
@@ -225,11 +226,11 @@
       case "tts":
         body.classList.toggle("accessibility_tts");
         const msg = new SpeechSynthesisUtterance(
-          "Hello I'm TTS bot, I'll read the text for you!! [In the navbar: , Kupczyk, HOME, ABOUT, SKILLS, WORK, PROJECTS, SHOP, RESUME]"
+          "Hello I'm TTS bot, I'll read the text for you!! [In the navbar: , Kupczyk, HOME, ABOUT, SKILLS, WORK, PROJECTS, SHOP, CV]"
         );
         window.speechSynthesis.speak(msg);
         const msg2 = new SpeechSynthesisUtterance(
-          "[In the about section: Name: Jan Karol Kupczyk Profile: DBA, Web Designer, IT specialist, Web Developer Email: janekkupczyk|eleven|gmail.com]"
+          "[In the about section: Name: Jan Kupczyk Profile: DBA, Web Designer, IT specialist, Web Developer Email: janekkupczyk|eleven|gmail.com]"
         );
         window.speechSynthesis.speak(msg2);
         const msg3 = new SpeechSynthesisUtterance(

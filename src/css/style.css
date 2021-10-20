@@ -778,9 +778,9 @@ a:hover {
 }
 
 #progress-bar-container {
-  top: 0%;
+  bottom: 0%;
   width: 100%;
-  position: relative;
+  position: fixed;
   height: 4px;
   background-color: #A9A9A9;
   z-index: 7;
@@ -953,6 +953,11 @@ a:hover {
   right: 15px;
   line-height: 25px;
   overflow: hidden;
+}
+
+div.card.card-blog::marker {
+  display: none;
+  color: transparent;
 }
 
 .card-blog .card-category {
