@@ -78,8 +78,7 @@ function cvon() {
         if (result.isConfirmed) {
             swalWithBootstrapButtons.fire(
                 'Select CV language',
-                '<select name="lang" id="" class="Select-button"> <option value="pl" class="Polish">Polish  🇵🇱</option> <option value="en" class="English">English  🇬🇧</option> </select>',
-                '</select>'
+                '<select name="lang" id="cvform" class="Select-button"> <option value="pl" class="Polish" onclick="downloadPL()">Polish  🇵🇱</option> <option value="en" class="English" onclick="downloadGB()">English  🇬🇧</option> </select>'
             )
         }
         else if (
@@ -93,3 +92,4 @@ function cvon() {
         }
     })
 }
+
