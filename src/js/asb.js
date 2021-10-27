@@ -230,7 +230,7 @@
         );
         window.speechSynthesis.speak(msg);
         const msg2 = new SpeechSynthesisUtterance(
-          "[In the about section: Name: Jan Kupczyk Profile: DBA, Web Designer, IT specialist, Web Developer Email: janekkupczyk|eleven|gmail.com]"
+          "[In the about section: Name: Jan Kupczyk Profile: DBA, Web Designer, IT specialist, Web Developer Email: kupczyk|contact|gmail.com]"
         );
         window.speechSynthesis.speak(msg2);
         const msg3 = new SpeechSynthesisUtterance(
@@ -258,7 +258,7 @@
         );
         window.speechSynthesis.speak(msg8);
         const msg9 = new SpeechSynthesisUtterance(
-          "[In the skills section: PHP, PYTHON Programming skills in PHP and Python, knowledge of libraries.]"
+          "[In the skills section: PHP, PYTHON Programming skills in PHP and Python.]"
         );
         window.speechSynthesis.speak(msg9);
         const msg10 = new SpeechSynthesisUtterance(
