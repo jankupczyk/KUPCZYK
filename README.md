@@ -18,13 +18,13 @@
 </p>
 
 <br><br><br>
-- 🔭 I’m currently working on [My website "K U P C Z Y K"](https://github.com/jankupczyk/KUPCZYK)
+- 🔭 I’m currently working on [My website](https://github.com/jankupczyk/KUPCZYK)
 
-- 🌱 I’m currently learning on ** **
+- 🌱 I’m currently learning **FLASK**
 
-- 👨‍💻 All of my projects are available at [https://jankupczyk.github.io/KUPCZYK/](https://jankupczyk.github.io/KUPCZYK/)
+- 👨‍💻 All of my projects are available [HERE](https://github.com/jankupczyk?tab=repositories)
 
-- 📝 I regularly write articles on [https://jankupczyk.github.io/KUPCZYK/](https://jankupczyk.github.io/KUPCZYK/)
+- 📝 I regularly write articles on [https://jankupczyk.github.io/KUPCZYK/blog](https://jankupczyk.github.io/KUPCZYK/)
 
 - 📫 How to reach me **jankupczyk11@gmail.com**
 
@@ -45,9 +45,4 @@
 </p>
 
 
-
-
-
-
-
-
+<p align="center"><img src="https://camo.githubusercontent.com/7998890254268d8ed476c9f66d3fa59d21dd354d2090036083c82af4cda2a0eb/68747470733a2f2f666f7274686562616467652e636f6d2f696d616765732f6261646765732f6275696c742d776974682d6c6f76652e737667" data-canonical-src="https://forthebadge.com/images/badges/built-with-love.svg" style="max-width: 100%;"></p>
