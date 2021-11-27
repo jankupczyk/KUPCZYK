@@ -336,12 +336,12 @@ a:hover {
   display: none;
   background: crimson;
   color: #fff;
-  width: 44px;
-  height: 44px;
+  width: 28px;
+  height: 28px;
   text-align: center;
   line-height: 1;
   font-size: 16px;
-  border-radius: 50%;
+  border-radius: 25%;
   right: 15px;
   bottom: 15px;
   transition: background 0.5s;
@@ -356,10 +356,9 @@ a:hover {
 }
 
 .back-to-top i {
-  padding-top: 12px;
+  padding-top: 4px;
   color: #fff;
 }
-
 
 
 #preloader {
@@ -783,7 +782,7 @@ a:hover {
   width: 100%;
   position: fixed;
   height: 4px;
-  background-color: #A9A9A9;
+  background-color: #1d1d1d;
   z-index: 7;
   opacity: 0.8;
 }
