@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Janek</h1>
-<h3 align="center">I'm 20 years old and I'm an IT specialist, I like to make new friends and work with them, I'm interested in new technologies, travel, politics, sports, and games.</h3>
+<h3 align="center">I'm 20 years old and I'm an IT specialist, I like to make new friends and work with them, I'm interested in new technologies, travel, politics, sports, and games.</h3>   
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=jankupczyk&label=Profile%20views&color=0e75b6&style=flat" alt="jankupczyk" />
