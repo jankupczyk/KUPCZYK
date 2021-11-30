@@ -1,12 +1,4 @@
 <h1 align="center">Hi 👋, I'm Janek</h1>
-<h3 align="center">I'm 20 years old and I'm an IT specialist, I like to make new friends and work with them, I'm interested in new technologies, travel, politics, sports, and games.</h3>   
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=jankupczyk&label=Profile%20views&color=0e75b6&style=flat" alt="jankupczyk" />
-</p>
-
-<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=jankupczyk&theme=dracula&row=1&column=7" alt="jankupczyk" /></a> 
-</p>
 
 <p align="center">
    <img src="https://github-readme-stats.vercel.app/api?username=jankupczyk&show_icons=true&locale=en" alt="jankupczyk" />
@@ -18,17 +10,17 @@
 </p>
 
 <br><br><br>
-- 🔭 I’m currently working on [My website](https://github.com/jankupczyk/KUPCZYK)
+- 🔭 I’m currently working on [Python Calculator](https://github.com/jankupczyk/Calculator) and [PY2gether](https://github.com/jankupczyk/PY2gether)
 
-- 🌱 I’m currently learning **FLASK**
+- 🌱 I’m currently learning **C#**
 
 - 👨‍💻 All of my projects are available [HERE](https://github.com/jankupczyk?tab=repositories)
 
-- 📝 I regularly write articles on [https://jankupczyk.github.io/KUPCZYK/blog](https://jankupczyk.github.io/KUPCZYK/)
+- 📝 I regularly write articles on [https://jankupczyk.github.io/KUPCZYK/Blog](https://jankupczyk.github.io/KUPCZYK/)
 
 - 📫 How to reach me **jankupczyk11@gmail.com**
 
-- 📄 Know about my experiences [https://jankupczyk.github.io/KUPCZYK/](https://jankupczyk.github.io/KUPCZYK/)
+- 📄 Know about my experiences [LinkedIn](https://www.linkedin.com/in/jan-kupczyk/)
 
 - ⚡ Fun fact **😉**
 
