@@ -242,7 +242,7 @@
         );
         window.speechSynthesis.speak(msg4);
         const msg5 = new SpeechSynthesisUtterance(
-          "[In the skills section: WEB DEVELOPMENT General knowledge about building websites, knowledge of languages ​​such as JS, css, Sass, html.]"
+          "[In the skills section: WEB DEVELOPMENT General knowledge about building websites, knowledge of languages ​​such as JS, css, html.]"
         );
         window.speechSynthesis.speak(msg5);
         const msg6 = new SpeechSynthesisUtterance(
@@ -314,7 +314,7 @@
         );
         window.speechSynthesis.speak(msg22);
         const msg23 = new SpeechSynthesisUtterance(
-          "[All my latest projects] [Search bar] [resume, message generator, kawaleria rp, zombioo, MyConv, python]"
+          "[All my latest projects] [Search bar]"
         );
         window.speechSynthesis.speak(msg23);
         const msg24 = new SpeechSynthesisUtterance(

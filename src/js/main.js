@@ -20,7 +20,7 @@
 
 	$(window).on('load', function () {
 		if ($('#preloader').length) {
-			$('#preloader').delay(150).fadeOut('slow', function () {
+			$('#preloader').delay(200).fadeOut('slow', function () {
 				$(this).remove();
 			});
 		}
@@ -45,8 +45,13 @@
 	});
 
 	$('.counter').counterUp({
+		delay: 20,
+		time: 2300
+	});
+
+	$('.count').counterUp({
 		delay: 15,
-		time: 2000
+		time: 2900
 	});
 
 	$('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
@@ -93,9 +98,9 @@
 		var typed_strings = $('.text-slider-items').text();
 		var typed = new Typed('.text-slider', {
 			strings: typed_strings.split(','),
-			typeSpeed: 90,
+			typeSpeed: 70,
 			loop: true,
-			backDelay: 500,
+			backDelay: 350,
 			backSpeed: 25
 		});
 	}
@@ -103,7 +108,7 @@
 	$('#testimonial-mf').owlCarousel({
 		margin: 20,
 		autoplay: true,
-		autoplayTimeout: 5000,
+		autoplayTimeout: 5225,
 		autoplayHoverPause: true,
 		responsive: {
 			0: {
