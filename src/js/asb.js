@@ -212,7 +212,7 @@
         break;
       case "mobile":
         location.reload(true);
-        viewportid.setAttribute.remove("desktop")
+        body.style.viewportid.setAttribute.remove("desktop")
       case "reset":
         Dark.currentState === true ? Dark.setState(false) : null;
         Contrast.currentState === true ? Contrast.setState(false) : null;

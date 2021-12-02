@@ -39,10 +39,10 @@
     line-height: 1;
     color: #fff;
     background-color: crimson;
-    width: 2.3rem;
+    width: 2.2rem;
     height: 2.3rem;
     padding: 0;
-    border-radius: 50%;
+    border-radius: 11%;
     border: none;
     position: absolute;
     top: 50%;
@@ -53,7 +53,7 @@
 }
 
 #universalAccessBtn:hover{
-    opacity: 95%; 
+    opacity: 93%; 
 }
 
 #accessibilityBar button#universalAccessBtn span {

@@ -360,6 +360,37 @@ a:hover {
   color: #fff;
 }
 
+/*  */
+
+.back-to-down {
+  position: fixed;
+  display: none;
+  background: crimson;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 1;
+  font-size: 16px;
+  border-radius: 25%;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+  z-index: 11;
+  transition: 0.6 ease-in-out;
+}
+
+.back-to-down:hover {
+  transition: 0.6 ease-in-out;
+  transform: scale(0.90);
+  opacity: 70%;
+}
+
+.back-to-down i {
+  padding-top: 4px;
+  color: #fff;
+}
+
 
 #preloader {
   position: fixed;
@@ -394,12 +425,16 @@ a:hover {
   color: #00ACEE;
 }
 
+#GH{
+  color: white;
+}
+
 #IG {
   color: white;
   background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
   border-radius: 30%;
-  height: 31.7px;
-  width: 32px;
+  height: 39px;
+  width: 39px;
 }
 
 #EM {
@@ -930,14 +965,11 @@ a:hover {
 }
 
 .testimonial-box .comit {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: crimson;
-  background-color: #fff;
-  width: 52px;
-  height: 52px;
+  background-color: transparent; 
   display: block;
   margin: 0 auto;
-  border-radius: 50%;
   line-height: 1.6;
 }
 
@@ -1400,6 +1432,9 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 768px) {
   .back-to-top {
+    bottom: 15px;
+  }
+  .back-to-down{
     bottom: 15px;
   }
 }
