@@ -12,7 +12,7 @@
 <br><br><br>
 - 🔭 I’m currently working on [Python Calculator](https://github.com/jankupczyk/Calculator) and [PY2gether](https://github.com/jankupczyk/PY2gether)
 
-- 🌱 I’m currently learning **C#**
+- 🌱 I’m currently learning **C#**  
 
 - 👨‍💻 All of my projects are available [HERE](https://github.com/jankupczyk?tab=repositories)
 
