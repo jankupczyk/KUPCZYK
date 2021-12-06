@@ -425,7 +425,7 @@ a:hover {
   color: #00ACEE;
 }
 
-#GH{
+#GH {
   color: white;
 }
 
@@ -479,6 +479,10 @@ a:hover {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.its-a-tree:hover {
+  animation: loader-spin .7s infinite linear;
 }
 
 .navbar-b {
@@ -967,7 +971,7 @@ a:hover {
 .testimonial-box .comit {
   font-size: 2.5rem;
   color: crimson;
-  background-color: transparent; 
+  background-color: transparent;
   display: block;
   margin: 0 auto;
   line-height: 1.6;
@@ -1311,6 +1315,16 @@ body::-webkit-scrollbar-thumb {
   border-width: 0px 0 2px 2px;
 }
 
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes bnce {
 
   0%,
@@ -1434,7 +1448,8 @@ body::-webkit-scrollbar-thumb {
   .back-to-top {
     bottom: 15px;
   }
-  .back-to-down{
+
+  .back-to-down {
     bottom: 15px;
   }
 }
