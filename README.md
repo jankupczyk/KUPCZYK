@@ -10,7 +10,7 @@
 </p>
 
 <br><br><br>
-- 🔭 I’m currently working on [Python Calculator](https://github.com/jankupczyk/Calculator) and [PY2gether](https://github.com/jankupczyk/PY2gether)
+- 🔭 I’m currently working on [Python Calculator](https://github.com/jankupczyk/Calculator), [Tree-Traversals](https://github.com/jankupczyk/Tree-Traversals) and [PY2gether](https://github.com/jankupczyk/PY2gether)
 
 - 🌱 I’m currently learning **C#**  
 
