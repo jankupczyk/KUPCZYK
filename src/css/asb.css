@@ -142,7 +142,7 @@
     #accessibilityBar #universalAccessBtn {
         top: initial;
         transform: translateX(-120%);
-        bottom: 16px;
+        bottom: 90px;
         border-radius: 50%
     }
 }

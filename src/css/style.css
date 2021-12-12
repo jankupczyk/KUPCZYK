@@ -343,7 +343,7 @@ a:hover {
   font-size: 16px;
   border-radius: 25%;
   right: 15px;
-  bottom: 15px;
+  bottom: 50px;
   transition: background 0.5s;
   z-index: 11;
   transition: 0.6 ease-in-out;
@@ -1446,7 +1446,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 768px) {
   .back-to-top {
-    bottom: 15px;
+    bottom: 50px;
   }
 
   .back-to-down {

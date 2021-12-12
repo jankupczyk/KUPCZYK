@@ -43,6 +43,24 @@
 			scrollTop: 0
 		}, 1000);
 	});
+
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.back-to-down').fadeIn('slow');
+		} else {
+			$('.back-to-down').fadeOut('slow');
+		}
+	});
+	$('.back-to-down').click(function () {
+		$('html, body').animate({ scrollTop: 15000 }, 1500, 'easeInOutExpo');
+		return false;
+	});
+	
+	$('.scrolldown-mf').on("click", function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
 	
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 800) {
