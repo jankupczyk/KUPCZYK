@@ -16,7 +16,7 @@
 
 - 👨‍💻 All of my projects are available [HERE](https://github.com/jankupczyk?tab=repositories)
 
-- 📝 I regularly write articles on [https://jankupczyk.github.io/KUPCZYK/Blog](https://jankupczyk.github.io/KUPCZYK/)
+- 📝 I regularly write articles on [WEBSITE](https://jankupczyk.github.io/KUPCZYK/Blog/1)
 
 - 📫 How to reach me **jankupczyk11@gmail.com**
 
