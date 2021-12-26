@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Janek</h1>
+<h1 align="center">Hi 👋, I'm Janek</h1>  
 
 <p align="center">
    <img src="https://github-readme-stats.vercel.app/api?username=jankupczyk&show_icons=true&locale=en" alt="jankupczyk" />
