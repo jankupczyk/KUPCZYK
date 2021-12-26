@@ -342,8 +342,8 @@ a:hover {
   line-height: 1;
   font-size: 16px;
   border-radius: 25%;
-  right: 15px;
-  bottom: 50px;
+  right: 13px;
+  bottom: 55px;
   transition: background 0.5s;
   z-index: 11;
   transition: 0.6 ease-in-out;
@@ -373,8 +373,8 @@ a:hover {
   line-height: 1;
   font-size: 16px;
   border-radius: 25%;
-  right: 15px;
-  bottom: 15px;
+  right: 13px;
+  bottom: 20px;
   transition: background 0.5s;
   z-index: 11;
   transition: 0.6 ease-in-out;
@@ -419,14 +419,32 @@ a:hover {
 
 #LI {
   color: #0078ff;
+  transition: ease-in-out 0.5s;
+}
+
+#LI:hover{
+  transform: scale(1.25);
+  transition: ease-in-out 0.5s;
 }
 
 #TW {
   color: #00ACEE;
+  transition: ease-in-out 0.5s;
+}
+
+#TW:hover{
+  transform: scale(1.25);
+  transition: ease-in-out 0.5s;
 }
 
 #GH {
   color: white;
+  transition: ease-in-out 0.5s;
+}
+
+#GH:hover{
+  transform: scale(1.25);
+  transition: ease-in-out 0.5s;
 }
 
 #IG {
@@ -435,10 +453,22 @@ a:hover {
   border-radius: 30%;
   height: 39px;
   width: 39px;
+  transition: ease-in-out 0.5s;
+}
+
+#IG:hover{
+  transform: scale(1.25);
+  transition: ease-in-out 0.5s;
 }
 
 #EM {
   color: #26ace9;
+  transition: ease-in-out 0.5s;
+}
+
+#EM:hover{
+  transform: scale(1.25);
+  transition: ease-in-out 0.5s;
 }
 
 .disabled-sp {
@@ -830,6 +860,7 @@ a:hover {
   width: 0%;
   height: 4px;
   background-color: crimson;
+  transition: ease-in 0.1ms;
 }
 
 .service-box {
@@ -1500,4 +1531,21 @@ body::-webkit-scrollbar-thumb {
     -ms-transform: scale(0.9);
     transform: scale(0.9);
   }
+}
+
+.🥚{
+z-index: 9999;
+position: absolute;
+transform: translateY(-120%);
+background-color: crimson;
+background: crimson;
+border-radius: 0 0 2px 2px;
+transition: transform ease-in 500ms;
+left: 5%;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: 800;
+}
+
+.🥚:focus{
+transform: translateY(0);
 }

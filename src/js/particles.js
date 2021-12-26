@@ -54,7 +54,7 @@ particlesJS("home", {
         },
         "move": {
             "enable": true,
-            "speed": 4,
+            "speed": 3,
             "direction": "none",
             "random": false,
             "straight": false,
@@ -63,7 +63,7 @@ particlesJS("home", {
             "attract": {
                 "enable": false,
                 "rotateX": 600,
-                "rotateY": 1000
+                "rotateY": 1200
             }
         }
     },

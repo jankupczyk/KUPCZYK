@@ -63,7 +63,7 @@
 	});
 	
 	$(window).scroll(function () {
-		if ($(this).scrollTop() > 800) {
+		if ($(this).scrollTop() > 1800) {
 			$('#accessibilityBar button#universalAccessBtn').fadeIn('slow');
 		} else {
 			$('#accessibilityBar button#universalAccessBtn').fadeOut('slow');
@@ -90,7 +90,7 @@
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			if (target.length) {
 				$('html, body').animate({
-					scrollTop: (target.offset().top - navHeight + 5)
+					scrollTop: (target.offset().top - navHeight + 7)
 				}, 1000, "easeInOutExpo");
 				return false;
 			}
