@@ -1537,15 +1537,19 @@ body::-webkit-scrollbar-thumb {
 z-index: 9999;
 position: absolute;
 transform: translateY(-120%);
-background-color: crimson;
-background: crimson;
+background-color: transparent;
+background: transparent;
+color: #fff;
+opacity: 0.6;
+border-color: transparent;
 border-radius: 0 0 2px 2px;
 transition: transform ease-in 500ms;
-left: 5%;
+left: 6%;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-weight: 800;
+font-weight: 1000;
 }
 
 .🥚:focus{
 transform: translateY(0);
+transition: transform ease-in 500ms;
 }
