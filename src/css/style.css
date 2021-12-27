@@ -1544,12 +1544,19 @@ opacity: 0.6;
 border-color: transparent;
 border-radius: 0 0 2px 2px;
 transition: transform ease-in 500ms;
+transition: ease-in 500ms;
 left: 6%;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 font-weight: 1000;
+padding: 4px;
 }
 
 .🥚:focus{
 transform: translateY(0);
 transition: transform ease-in 500ms;
+transition: ease-in 500ms;
+}
+
+.🥚:hover{
+  transition: ease-in 500ms;
 }
