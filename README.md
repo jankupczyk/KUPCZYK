@@ -1,5 +1,7 @@
 <h1 align="center">Hi 👋, I'm Janek</h1>  
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8e47ab34-4af1-40a7-8060-d6aa111c4b5a/deploy-status)](https://app.netlify.com/sites/youthful-tereshkova-df4f6e/deploys)
+
 <p align="center"> 
    <img src="https://github-readme-stats.vercel.app/api?username=jankupczyk&show_icons=true&locale=en" alt="jankupczyk" />
    <img src="https://github-readme-streak-stats.herokuapp.com/?user=jankupczyk&" alt="jankupczyk" />
