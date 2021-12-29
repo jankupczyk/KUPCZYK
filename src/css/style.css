@@ -104,7 +104,20 @@ a:hover {
   height: 32px;
   margin-right: 4px;
   overflow: hidden;
+  transition: ease-in 80ms;
 }
+
+.avatar:hover{
+  border: 3px solid rgb(0, 226, 0);
+  transition: ease-in 80ms;
+}
+
+.avatar:focus{
+  border: 3px solid rgb(0, 226, 0);
+  transition: ease-in 80ms;
+}
+
+
 
 .bg-image {
   background-repeat: no-repeat;
