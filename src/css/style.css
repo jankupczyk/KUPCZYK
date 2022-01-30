@@ -107,12 +107,12 @@ a:hover {
   transition: ease-in 80ms;
 }
 
-.avatar:hover{
+.avatar:hover {
   border: 3px solid rgb(0, 226, 0);
   transition: ease-in 80ms;
 }
 
-.avatar:focus{
+.avatar:focus {
   border: 3px solid rgb(0, 226, 0);
   transition: ease-in 80ms;
 }
@@ -435,7 +435,7 @@ a:hover {
   transition: ease-in-out 0.5s;
 }
 
-#LI:hover{
+#LI:hover {
   transform: scale(1.25);
   transition: ease-in-out 0.5s;
 }
@@ -445,7 +445,7 @@ a:hover {
   transition: ease-in-out 0.5s;
 }
 
-#TW:hover{
+#TW:hover {
   transform: scale(1.25);
   transition: ease-in-out 0.5s;
 }
@@ -455,7 +455,7 @@ a:hover {
   transition: ease-in-out 0.5s;
 }
 
-#GH:hover{
+#GH:hover {
   transform: scale(1.25);
   transition: ease-in-out 0.5s;
 }
@@ -469,7 +469,7 @@ a:hover {
   transition: ease-in-out 0.5s;
 }
 
-#IG:hover{
+#IG:hover {
   transform: scale(1.25);
   transition: ease-in-out 0.5s;
 }
@@ -479,7 +479,7 @@ a:hover {
   transition: ease-in-out 0.5s;
 }
 
-#EM:hover{
+#EM:hover {
   transform: scale(1.25);
   transition: ease-in-out 0.5s;
 }
@@ -524,7 +524,9 @@ a:hover {
   }
 }
 
-.its-a-tree:hover {
+.its-a-tree:hover,
+.its-a-egg:hover,
+.its-a-turkey:hover {
   animation: loader-spin .7s infinite linear;
 }
 
@@ -966,6 +968,13 @@ a:hover {
 
 .work-content .w-more .w-ctegory {
   color: crimson;
+}
+
+.work-content .col-sm-4 .w-ctegory {
+  color: crimson;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-left: 30px;
 }
 
 .work-content .w-like {
@@ -1546,30 +1555,30 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.🥚{
-z-index: 9999;
-position: absolute;
-transform: translateY(-120%);
-background-color: transparent;
-background: transparent;
-color: #fff;
-opacity: 0.6;
-border-color: transparent;
-border-radius: 0 0 2px 2px;
-transition: transform ease-in 500ms;
-transition: ease-in 500ms;
-left: 6%;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-weight: 1000;
-padding: 4px;
+.🥚 {
+  z-index: 9999;
+  position: absolute;
+  transform: translateY(-120%);
+  background-color: transparent;
+  background: transparent;
+  color: #fff;
+  opacity: 0.6;
+  border-color: transparent;
+  border-radius: 0 0 2px 2px;
+  transition: transform ease-in 500ms;
+  transition: ease-in 500ms;
+  left: 6%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 1000;
+  padding: 4px;
 }
 
-.🥚:focus{
-transform: translateY(0);
-transition: transform ease-in 500ms;
-transition: ease-in 500ms;
+.🥚:focus {
+  transform: translateY(0);
+  transition: transform ease-in 500ms;
+  transition: ease-in 500ms;
 }
 
-.🥚:hover{
+.🥚:hover {
   transition: ease-in 500ms;
 }

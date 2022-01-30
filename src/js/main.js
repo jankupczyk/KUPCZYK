@@ -37,7 +37,7 @@
 		$('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
 		return false;
 	});
-	
+
 	$('.scrolltop-mf').on("click", function () {
 		$('html, body').animate({
 			scrollTop: 0
@@ -55,13 +55,13 @@
 		$('html, body').animate({ scrollTop: 15000 }, 1500, 'easeInOutExpo');
 		return false;
 	});
-	
+
 	$('.scrolldown-mf').on("click", function () {
 		$('html, body').animate({
 			scrollTop: 0
 		}, 1000);
 	});
-	
+
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 1800) {
 			$('#accessibilityBar button#universalAccessBtn').fadeIn('slow');
@@ -73,7 +73,7 @@
 		$('html, body').animate({ scrollTop: 0 }, 1700, 'easeInOutExpo');
 		return false;
 	});
-	
+
 	$('.counter').counterUp({
 		delay: 20,
 		time: 2300
@@ -193,3 +193,8 @@ function search_bar_wrk() {
 		}
 	}
 }
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+	return new bootstrap.Tooltip(tooltipTriggerEl)
+})
