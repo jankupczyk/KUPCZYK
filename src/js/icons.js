@@ -1,5 +1,5 @@
 export const icons = {
-    tree: `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" aria-hidden="true" width="30" height="30"
+  tree: `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" aria-hidden="true" width="30" height="30"
     preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36" class="its-a-tree">
     <path fill="#662113"
       d="M22.088 32.83c0 1.997-1.619 2.712-3.616 2.712s-3.616-.715-3.616-2.712l.904-8.136c0-1.996.715-1.808 2.712-1.808c1.997 0 2.712-.188 2.712 1.808l.904 8.136z" />
@@ -31,7 +31,7 @@ export const icons = {
       d="M19.379 1.679c.143.275.512.549.817.609l1.379.269c.305.06.377.29.159.512l-.983 1.004c-.217.222-.365.657-.326.965l.17 1.394c.038.309-.159.448-.438.31L18.9 6.117c-.279-.138-.738-.144-1.02-.013l-1.274.594c-.282.13-.476-.014-.43-.322l.205-1.39c.045-.307-.091-.745-.302-.973l-.959-1.027c-.212-.227-.135-.457.172-.508l1.385-.234c.307-.051.681-.316.832-.588L18.19.427c.151-.272.394-.269.537.006l.652 1.246z" />
   </svg>`,
 
-    egg: `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" aria-hidden="true" width="30" height="30"
+  egg: `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" aria-hidden="true" width="30" height="30"
     preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 200" class="its-a-egg">
     <path
       d="M63.43 4.51c31.68-.07 51.67 51.46 43.78 84.12c-6.98 28.92-27.03 34.91-43.08 34.91s-35.54-7.78-43.08-33.79C12.33 59.63 33.87 4.58 63.43 4.51z"
@@ -48,7 +48,7 @@ export const icons = {
     <ellipse transform="rotate(-48.356 52.395 107.012)" cx="52.39" cy="107.01" rx="3.58" ry="3.46" fill="#d47858" />
   </svg>`,
 
-    turkey: `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="its-a-turkey" width="30" height="30"
+  turkey: `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="its-a-turkey" width="30" height="30"
   preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64">
   <path
     d="M62 33.9v-7.4c0-1.3-1.1-2.4-2.4-2.4h-3.2l2.8-1.6c1.1-.7 1.5-2.1.9-3.2l-3.7-6.4c-.7-1.1-2.1-1.5-3.2-.9l-2.8 1.6l1.6-2.8c.7-1.1.3-2.6-.9-3.2l-6.4-3.7c-1.1-.7-2.6-.3-3.2.9l-1.6 2.8V4.4c0-1.3-1.1-2.4-2.4-2.4h-7.4c-1.3 0-2.4 1.1-2.4 2.4v3.2l-1.6-2.8c-.7-1.1-2.1-1.5-3.2-.9l-6.4 3.7c-1.1.7-1.5 2.1-.9 3.2L8.8 23.1l20.6 11.5l12.1 20.9c.7 1.1 2.1 1.5 3.2.9l6.4-3.7c1.1-.7 1.5-2.1.9-3.2l-1.6-2.8l2.8 1.6c1.1.7 2.6.3 3.2-.9l3.7-6.4c.7-1.1.3-2.6-.9-3.2l-2.7-1.6h3.2c1.2 0 2.3-1 2.3-2.3"
@@ -80,7 +80,7 @@ export const icons = {
   </g>
 </svg>`,
 
-    ghost: `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="its-a-ghost" width="28" height="28"
+  ghost: `<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="its-a-ghost" width="28" height="28"
     preserveAspectRatio="xMidYMid meet" viewBox="0 0 128 128">
       <path
         d="M27.63 43.86c-5.81-.68-11.83-3.43-14.03-8.93c-1.71-4.27-3.17-10.64-8.16-9.88c-6.17.94-4.72 13.44-3.27 18.26c5.89 19.6 25.08 22.7 25.39 22.22c.39-.57 1.51-21.69.07-21.67z"
@@ -112,7 +112,7 @@ export const icons = {
         fill="#ccc" />
     </svg>`,
 
-    dragon: `      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="its-a-dragon" width="33" height="33"
+  dragon: `      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="its-a-dragon" width="33" height="33"
     preserveAspectRatio="xMidYMid meet" viewBox="0 0 128 128">
     <path
       d="M16.74 29.97c7.41-9.85 18.72-4 21.87-1.78c3.19 2.25 10.42 5.16 14.27 4.04c3.85-1.13 5.64-6.96 3.2-8.74c-3.08-2.25-5.46.04-5.36 2.08c.04.84.66 2.63-.75 3c-.73.19-1.6-.75-1.88-1.97c-.28-1.22-.26-2.8.94-4.79c2.51-4.16 10.52-3.14 11.77 2.66c1.2 5.62-2.49 9.51-6.14 10.85c-5.38 1.98-12.9-.32-16.42-3c-4.45-3.39-12.95-5.47-17.55-.09c-6.66 7.79 6.76 22.71 6.76 22.71l-5.26 4.13s-1.5-2.91-4.6-9.48c-2.92-6.18-5.21-13.83-.85-19.62z"
