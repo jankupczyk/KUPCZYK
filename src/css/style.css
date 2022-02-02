@@ -526,7 +526,9 @@ a:hover {
 
 .its-a-tree:hover,
 .its-a-egg:hover,
-.its-a-turkey:hover {
+.its-a-turkey:hover,
+.its-a-ghost:hover,
+.its-a-dragon:hover {
   animation: loader-spin .7s infinite linear;
 }
 
