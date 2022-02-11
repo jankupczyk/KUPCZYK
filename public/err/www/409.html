@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+    <title>409 Conflicting Request</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="&copy;Jan Kupczyk" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:url" content="https://jankupczyk.github.io/KUPCZYK/" />
+    <meta property="og:site_name" content="Kupczyk" />
+    <meta property="og:image" content="" />
+
+    <link href="/public/assets/favicon/favicon.ico" rel="icon" />
+    <link
+      href="/public/assets/favicon/png/apple-touch-icon.png"
+      rel="apple-touch-icon"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/assets/favicon/png/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/assets/favicon/png/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/public/assets/favicon/site.webmanifest" />
+
+    <link href="/src/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css"
+    />
+    <link
+      href="/src/lib/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="/src/lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="/src/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <link href="/src/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="main-err">
+      <p class="errormessage-header">4 0 9 - Conflicting Request</p>
+      <p id="errormessage">
+        Too many concurrent web requests <span id="verS"></span>
+      </p>
+      <div class="btn-back-container">
+        <a
+          class="btn-back"
+          href="https://kupczyk.netlify.app/"
+          rel="noopener noreferrer nofollw"
+          >GO HOME</a
+        >
+      </div>
+    </div>
+
+    <script>
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var paramValue = url.searchParams.get("filename");
+      document.getElementById("verS").innerHTML = `[${paramValue}]`;
+    </script>
+  </body>
+</html>
+
+<!-- Jan Kupczyk -->
