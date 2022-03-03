@@ -31,8 +31,8 @@ export const icons = {
       d="M19.379 1.679c.143.275.512.549.817.609l1.379.269c.305.06.377.29.159.512l-.983 1.004c-.217.222-.365.657-.326.965l.17 1.394c.038.309-.159.448-.438.31L18.9 6.117c-.279-.138-.738-.144-1.02-.013l-1.274.594c-.282.13-.476-.014-.43-.322l.205-1.39c.045-.307-.091-.745-.302-.973l-.959-1.027c-.212-.227-.135-.457.172-.508l1.385-.234c.307-.051.681-.316.832-.588L18.19.427c.151-.272.394-.269.537.006l.652 1.246z" />
   </svg>`,
 
-  egg: `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" aria-hidden="true" width="30" height="30"
-    preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 200" class="its-a-egg">
+  egg: `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" aria-hidden="true" width="34" height="34"
+    preserveAspectRatio="xMidYMid meet" viewBox="0 0 180 180" class="its-a-egg">
     <path
       d="M63.43 4.51c31.68-.07 51.67 51.46 43.78 84.12c-6.98 28.92-27.03 34.91-43.08 34.91s-35.54-7.78-43.08-33.79C12.33 59.63 33.87 4.58 63.43 4.51z"
       fill="#f2a05b" />
@@ -113,7 +113,7 @@ export const icons = {
     </svg>`,
 
   dragon: `      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="its-a-dragon" width="33" height="33"
-    preserveAspectRatio="xMidYMid meet" viewBox="0 0 128 128">
+    preserveAspectRatio="xMidYMid meet" viewBox="0 0 128 128" title="Chinese New Year 2022">
     <path
       d="M16.74 29.97c7.41-9.85 18.72-4 21.87-1.78c3.19 2.25 10.42 5.16 14.27 4.04c3.85-1.13 5.64-6.96 3.2-8.74c-3.08-2.25-5.46.04-5.36 2.08c.04.84.66 2.63-.75 3c-.73.19-1.6-.75-1.88-1.97c-.28-1.22-.26-2.8.94-4.79c2.51-4.16 10.52-3.14 11.77 2.66c1.2 5.62-2.49 9.51-6.14 10.85c-5.38 1.98-12.9-.32-16.42-3c-4.45-3.39-12.95-5.47-17.55-.09c-6.66 7.79 6.76 22.71 6.76 22.71l-5.26 4.13s-1.5-2.91-4.6-9.48c-2.92-6.18-5.21-13.83-.85-19.62z"
       fill="#78de89" />
@@ -156,5 +156,12 @@ export const icons = {
     <path
       d="M12 51.23c-1.07 1.19-.05 2.63.33 2.96s1.36.99 1.17 1.78c-.19.8-1.41 2.39-.52 3.14c.89.75 3.19-.66 3.47-3.33c.28-2.67-.89-3.85-1.5-4.41c-.6-.56-2.06-1.13-2.95-.14z"
       fill="#44484a" />
-  </svg>`
+  </svg>`,
+
+  sun: ` <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="its-a-sun" width="38" height="38"
+  preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48" title="Chinese New Year 2022"
+  style=" fill:#000000;"><path fill="#FF9800" d="M11 11H37V37H11z"></path><path fill="#FF9800" d="M11.272 11.272H36.728V36.728H11.272z" transform="rotate(-45.001 24 24)"></path><path fill="#FFEB3B" d="M13,24c0,6.077,4.923,11,11,11c6.076,0,11-4.923,11-11s-4.924-11-11-11C17.923,13,13,17.923,13,24"></path>
+  </svg> `,
+
+  ua: `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 36 36" title="UA 2022" class="its-a-ua" aria-hidden="true" preserveAspectRatio="xMidYMid meet"><path fill="#005BBB" d="M32 5H4a4 4 0 0 0-4 4v9h36V9a4 4 0 0 0-4-4z"/><path fill="#FFD500" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4v-9h36v9z"/></svg>`
 };

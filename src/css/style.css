@@ -1,6 +1,7 @@
 @font-face {
   font-family: OGV;
   src: url(../../public/assets/font/OGV.ttf);
+  font-display: swap;
 }
 
 body {
@@ -461,6 +462,16 @@ a:hover {
   transition: ease-in-out 0.5s;
 }
 
+#GL {
+  color: #f96424;
+  transition: ease-in-out 0.5s;
+}
+
+#GL:hover {
+  transform: scale(1.25);
+  transition: ease-in-out 0.5s;
+}
+
 #IG {
   color: white;
   background: radial-gradient(
@@ -501,13 +512,27 @@ a:hover {
 }
 
 #EM {
-  color: #26ace9;
+  color: #fffafa;
   transition: ease-in-out 0.5s;
 }
 
 #EM:hover {
   transform: scale(1.25);
   transition: ease-in-out 0.5s;
+}
+
+#WB {
+  color: #63dceb;
+  transition: ease-in-out 0.5s;
+}
+
+#WB:hover {
+  transform: scale(1.25);
+  transition: ease-in-out 0.5s;
+}
+
+#HRT {
+  color: #b81b47;
 }
 
 .disabled-sp {
@@ -554,8 +579,18 @@ a:hover {
 .its-a-egg:hover,
 .its-a-turkey:hover,
 .its-a-ghost:hover,
-.its-a-dragon:hover {
+.its-a-dragon:hover,
+.its-a-sun:hover {
   animation: loader-spin 0.7s infinite linear;
+}
+
+.its-a-ua {
+  transition: ease-in 0.4s;
+}
+
+.its-a-ua:hover {
+  transition: ease-in 0.4s;
+  transform: scale(1.4);
 }
 
 .navbar-b {
@@ -640,8 +675,9 @@ a:hover {
   background-color: #f5f5f5;
   padding-top: 1px;
   padding-bottom: 1px;
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  -webkit-box-pack: center;
 }
 
 .navbar-b.navbar-reduce .nav-link {
@@ -685,6 +721,7 @@ a:hover {
   font-weight: 800;
   letter-spacing: 1px;
   font-size: 10px;
+  white-space: nowrap;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -866,7 +903,6 @@ a:hover {
 }
 
 .about-mf .about-img img {
-  margin-left: 10px;
   border: 2px solid crimson;
   transition: 0.5s ease-in-out;
 }
@@ -1124,6 +1160,32 @@ div.card.card-blog::marker {
   display: inline-block;
 }
 
+.card-blog .post-status {
+  position: absolute;
+  z-index: 11;
+  top: 6%;
+}
+
+.post-date {
+  padding: 7px;
+}
+
+#YES {
+  color: #28a745;
+}
+
+#NO {
+  color: #dc3545;
+}
+
+#WAR {
+  color: #ffc107;
+}
+
+#Ist {
+  color: #ffd700;
+}
+
 .post-box,
 .form-comments,
 .box-comments,
@@ -1279,6 +1341,20 @@ footer .credits a {
   color: #fff;
 }
 
+footer .credits-made-by {
+  position: absolute;
+  color: #fff;
+  z-index: 9999;
+  bottom: 16px;
+  font-size: 10px;
+  padding: 10px;
+}
+
+footer .credits-made-by-link {
+  color: #fff;
+  z-index: 9999;
+}
+
 #sendmessage {
   color: crimson;
   border: 1px solid crimson;
@@ -1300,6 +1376,10 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background: crimson;
+}
+
+#err__b {
+  background-color: #2d2d2d;
 }
 
 .btn-back-container {
@@ -1372,6 +1452,16 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+.repo-language-color {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--color-primer-border-contrast);
+  border-radius: 50%;
+}
+
 .button:focus {
   outline: 0;
 }
@@ -1436,6 +1526,12 @@ body::-webkit-scrollbar-thumb {
   border-width: 0px 0 2px 2px;
 }
 
+.made-with {
+  text-align: center;
+  letter-spacing: 1px;
+  color: black !important;
+}
+
 @keyframes loader-spin {
   0% {
     transform: rotate(0);
@@ -1458,15 +1554,15 @@ body::-webkit-scrollbar-thumb {
   }
 
   40% {
-    -webkit-transform: translateY(-20px);
-    -ms-transform: translateY(-20px);
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-28px);
+    -ms-transform: translateY(-28px);
+    transform: translateY(-28px);
   }
 
   60% {
-    -webkit-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px);
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
   }
 }
 
@@ -1622,7 +1718,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.🥚 {
+.scope-focus-btn {
   z-index: 9999;
   position: absolute;
   transform: translateY(-120%);
@@ -1641,12 +1737,12 @@ body::-webkit-scrollbar-thumb {
   padding: 4px;
 }
 
-.🥚:focus {
+.scope-focus-btn:focus {
   transform: translateY(0);
   transition: transform ease-in 500ms;
   transition: ease-in 500ms;
 }
 
-.🥚:hover {
+.scope-focus-btn:hover {
   transition: ease-in 500ms;
 }

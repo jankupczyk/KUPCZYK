@@ -6,6 +6,8 @@
   <title>Kupczyk | Home</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Security-Policy" content="">
+  <meta name="theme-color" content="#DC143C">
   <meta name="author" content="&copy;Jan Kupczyk">
   <meta name="description"
     content="Hi, I'm Janek, I'm 20 years old and I'm an IT specialist and this is my website, collection of all useful information about me.">
@@ -17,33 +19,80 @@
   <meta property="og:site_name" content="Kupczyk" />
   <meta property="og:image" content="" />
 
+  <meta name="google-site-verification" content="M4GyZYF7oF1gcQiPetETu2Z5mYmxJo0vQmBgLyFhQ4k" />
+
+  <link href="public/assets/favicon/favicon.ico" rel="shortcut icon">
   <link href="public/assets/favicon/favicon.ico" rel="icon">
+
   <link href="public/assets/favicon/png/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link rel="icon" type="image/png" sizes="32x32" href="public/assets/favicon/png/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="public/assets/favicon/png/favicon-16x16.png">
+
   <link rel="manifest" href="public/assets/favicon/site.webmanifest">
 
   <link href="src/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <link href="src/css/style.css" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
-  <link href="src/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link href="src/lib/animate/animate.min.css" rel="stylesheet">
-  <link href="src/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="src/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
   <link href="src/lib/sweetalert2/scss/sweetalert2.css" rel="stylesheet">
   <link href="src/css/asb.css" rel="stylesheet" />
 
-  <link href="src/css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app!</noscript>
-  <a href="#about" class="🥚" tabindex="1">SKIP NAVIGATION</a>
+  <a href="#about" class="scope-focus-btn" tabindex="1">SKIP NAVIGATION</a>
+  <a href="#accessibilityBar" class="scope-focus-btn" tabindex="2" onclick="accessibilityBar.classList.toggle('active')">ACCESSIBILITY</a>
+  <a href="https://github.com/jankupczyk/KUPCZYK/issues" class="scope-focus-btn" tabindex="3" target="_blank" rel="noopener noreferrer nofollw">YOUR OPINION</a>
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container" id="cont">
       <a class="navbar-brand js-scroll" href="index.html">Kupczyk</a>
+
+      <script>
+              if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/src/js/service-worker.js")
+          .then(function (registration) {
+            console.log(
+              "Service-Worker registration was successful with scope -> ",
+              registration.scope
+            );
+          })
+          .catch(function (err) {
+            console.log("Service-Worker registration failed -> ", err);
+          });
+      }
+      </script>
+
+    <script>
+    try{
+      const images = document.querySelectorAll("img");
+      
+      const imgOptions = {};
+      const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const img = entry.target;
+          imgObserver.unobserve(entry.target);
+        });
+      }, imgOptions);
+      
+      images.forEach((img) => {
+        imgObserver.observe(img);
+      });
+      console.log('IntersectionObserver activated!')
+      }
+      catch{
+        console.log('IntersectionObserver encounter error')
+      }
+      
+      </script>
 
       <script type="module">
         import {icons} from "./src/js/icons.js";
@@ -51,17 +100,27 @@
         const DateTime = new Date();
         const container = document.querySelector("#cont a");
 
-        if (DateTime.getMonth() == 0 || DateTime.getMonth() == 11) {
-          container.insertAdjacentHTML("afterend", icons.tree);
-        } else if (DateTime.getMonth() == 1 || DateTime.getMonth() == 2) {
-          container.insertAdjacentHTML("afterend", icons.dragon);
-        } else if (DateTime.getMonth() == 3 || DateTime.getMonth() == 4) {
-          container.insertAdjacentHTML("afterend", icons.egg);
-        } else if (DateTime.getMonth() == 9) {
-          container.insertAdjacentHTML("afterend", icons.ghost);
-        } else if (DateTime.getMonth() == 10) {
-          container.insertAdjacentHTML("afterend", icons.turkey);
-        };
+        let icon = `<span />`;
+
+        if (DateTime.getMonth() == 11 || DateTime.getMonth() == 0) { //grudzien i styczen
+          icon = icons.tree;
+        } else if (DateTime.getMonth() == 1) { //luty
+          icon = icons.dragon;
+        }else if (DateTime.getMonth() == 2){
+          icon = icons.ua;
+        } else if (DateTime.getMonth() == 3 || DateTime.getMonth() == 4) { //kwiecien i maj
+          icon = icons.egg;
+        } else if (DateTime.getMonth() == 5 || DateTime.getMonth() == 6){ //czerwiec
+          icon = icons.sun;
+        } else if (DateTime.getMonth() == 9) { //pazdziernik
+          icon = icons.ghost;
+        } else if (DateTime.getMonth() == 10) { //listopad
+          icon = icons.turkey;
+        }; //domyslnie puste <span />
+
+        //marzec, lipiec, sierpien, wrzesien
+
+        container.insertAdjacentHTML("afterend", icon);
       </script>
 
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
@@ -74,25 +133,25 @@
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll active" href="#home">Home</a>
+            <a class="nav-link js-scroll active" href="#home" onclick="document.title = 'Kupczyk | Home'">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#about">About</a>
+            <a class="nav-link js-scroll" href="#about" onclick="document.title = 'About | Kupczyk'">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service">Skills</a>
+            <a class="nav-link js-scroll" href="#service" onclick="document.title = 'Skills | Kupczyk'">Skills</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#work">Work</a>
+            <a class="nav-link js-scroll" href="#work" onclick="document.title = 'Work | Kupczyk'">Work</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#projects">Projects</a>
+            <a class="nav-link js-scroll" href="#projects" onclick="document.title = 'Projects | Kupczyk'">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#edu">Education</a>
+            <a class="nav-link js-scroll" href="#edu" onclick="document.title = 'Education | Kupczyk'">Education</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#resume">CV</a>
+            <a class="nav-link js-scroll" href="#resume" onclick="document.title = 'CV | Kupczyk'">CV</a>
           </li>
         </ul>
       </div>
@@ -107,12 +166,12 @@
         <div class="container">
           <h1 class="intro-title mb-4">Jan Kupczyk</h1>
           <p class="intro-subtitle"><span class="text-slider-items">IT enthusiast, Web and database administrator
-              |DBA|,Web Designer,IT
-              specialist,Web Developer</span><strong class="text-slider"></strong></p>
+              |DBA|, Web Designer, IT
+              specialist, Web Developer</span><strong class="text-slider"></strong></p>
           <div class="gif-player">
-            <a class="stop-gif-reduce"></a></div>
+            <a href="stop-gif" class="stop-gif-reduce" aria-label="stop gif"></a></div>
           <div class="scroll-div-mouse">
-            <a href="#" class="scroll-down"></a>
+            <a href="scroll-down" class="scroll-down" aria-label="scroll down button"></a>
           </div>
         </div>
       </div>
@@ -129,7 +188,7 @@
                   <div class="col-sm-6 col-md-5">
                     <div class="about-img">
                       <img loading="lazy" src="public/assets/photos/webp/IMG_8184.webp"
-                        class="img-fluid rounded b-shadow-a" alt="It's me :)">
+                        class="img-fluid rounded b-shadow-a" alt="It's me :)" width="100%" height="100%">
                     </div>
                   </div>
                   <div class="col-sm-6 col-md-7">
@@ -137,6 +196,7 @@
                       <p><span class="title-s">Name: </span> <span>Jan Kupczyk</span></p>
                       <p><span class="title-s">Profile: </span> <span>DBA, Web Designer, IT specialist, Web
                           Developer</span></p>
+                      <p><span class="title-s">Location: </span> <span>Poland</span></p>
                       <p><span class="title-s">Email: </span> <span>kupczykcontact@gmail.com</span></p>
                     </div>
                   </div>
@@ -194,13 +254,13 @@
         <div class="col-md-4">
           <div class="service-box">
             <div class="service-ico">
-              <span class="ico-circle"><i class="fa fa-buysellads"></i></span>
+              <span class="ico-circle"><i class="fa fa-server"></i></span>
             </div>
             <div class="service-content">
-              <h2 class="s-title">SEO/SEM </h2>
+              <h2 class="s-title">Computer-Literate</h2>
               <p class="s-description text-center">
-                Knowledge of the basics of SEO and SEM marketing, confirmed by a certificate <b>"Google: Fundamentals
-                  of digital marketing"</b>.
+                Computer skills, knowledge of <b>Microsoft Office</b>, <b>Windows 10</b> and <b>CMD</b>.
+                <br><br><br>
               </p>
             </div>
           </div>
@@ -208,7 +268,7 @@
         <div class="col-md-4">
           <div class="service-box">
             <div class="service-ico">
-              <span class="ico-circle"><i class="fa fa-file-code-o"></i></span>
+              <span class="ico-circle"><i class="fa-solid fa-laptop-code"></i></span>
             </div>
             <div class="service-content">
               <h2 class="s-title">Web Development</h2>
@@ -237,7 +297,7 @@
         <div class="col-md-4">
           <div class="service-box">
             <div class="service-ico">
-              <span class="ico-circle"><i class="fa fa-rss"></i></span>
+              <span class="ico-circle"><i class="fa-solid fa-network-wired"></i></span>
             </div>
             <div class="service-content">
               <h2 class="s-title">Networking</h2>
@@ -254,13 +314,16 @@
         <div class="col-md-4">
           <div class="service-box">
             <div class="service-ico">
-              <span class="ico-circle"><i class="fa fa-server"></i></span>
+              <span class="ico-circle"><i class="fa-brands fa-linux"></i></span>
             </div>
             <div class="service-content">
-              <h2 class="s-title">Computer-Literate</h2>
+              <h2 class="s-title">BASH</h2>
               <p class="s-description text-center">
-                Computer skills, knowledge of <b>Microsoft Office</b>, <b>Windows 10</b> and <b>CMD</b>.
-                <br><br><br><br>
+                Programming skills in <b>BASH</b>, knowledge of <b>ShellCheck</b>.
+                <br>
+                <br>
+                <br>
+                <br>
               </p>
             </div>
           </div>
@@ -282,7 +345,21 @@
         <div class="col-md-4">
           <div class="service-box">
             <div class="service-ico">
-              <span class="ico-circle"><i class="fa fa-paint-brush"></i></span>
+              <span class="ico-circle"><i class="fa-solid fa-magnifying-glass-dollar"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title">SEO/SEM </h2>
+              <p class="s-description text-center">
+                Knowledge of the basics of SEO and SEM marketing, confirmed by a certificate <b>"Google: Fundamentals
+                  of digital marketing"</b>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="fa-solid fa-palette"></i></span>
             </div>
             <div class="service-content">
               <h2 class="s-title">GRAPHICS</h2>
@@ -295,7 +372,7 @@
         <div class="col-md-4">
           <div class="service-box">
             <div class="service-ico">
-              <span class="ico-circle"><i class="fa fa-video-camera"></i></span>
+              <span class="ico-circle"><i class="fa-solid fa-clapperboard"></i></span>
             </div>
             <div class="service-content">
               <h2 class="s-title">FILMING</h2>
@@ -306,21 +383,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="col-md-4">
-          <div class="service-box">
-            <div class="service-ico">
-              <span class="ico-circle"><i class="fa fa-bold"></i></span>
-            </div>
-            <div class="service-content">
-              <h2 class="s-title">BASH</h2>
-              <p class="s-description text-center">
-                Programming skills in <b>BASH</b>, knowledge of <b>ShellCheck</b>.
-                <br>
-                <br>
-              </p>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </section>
@@ -332,7 +394,7 @@
         <div class="col-sm-3 col-lg-3">
           <div class="counter-box">
             <div class="counter-ico">
-              <span class="ico-circle"><i class="fa fa-check"></i></span>
+              <span class="ico-circle"><i class="fa-solid fa-handshake"></i></span>
             </div>
             <div class="counter-num">
               <p class="counter">2</p>
@@ -354,7 +416,7 @@
         <div class="col-sm-3 col-lg-3">
           <div class="counter-box pt-4 pt-md-0">
             <div class="counter-ico">
-              <span class="ico-circle"><i class="fa fa-certificate"></i></span>
+              <span class="ico-circle"><i class="fa-solid fa-file-contract"></i></span>
             </div>
             <div class="counter-num">
               <p class="counter">3</p>
@@ -367,7 +429,7 @@
         <div class="col-sm-3 col-lg-3">
           <div class="counter-box pt-4 pt-md-0">
             <div class="counter-ico">
-              <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+              <span class="ico-circle"><i class="fa-solid fa-crown"></i></span>
             </div>
             <div class="counter-num">
               <p class="counter">1</p>
@@ -397,7 +459,34 @@
       <div class="row">
         <div class="col-md-4">
           <div class="work-box">
-            <a href="public/assets/photos/webp/santander.webp" data-lightbox="gallery-mf">
+            <a href="public/assets/photos/webp/santander.webp" data-lightbox="gallery-mf" aria-label="Banco Santander">
+              <div class="work-img">
+                <img loading="lazy" src="public/assets/photos/webp/santander.webp" alt="Banco Santander logo"
+                  class="img-fluid">
+              </div>
+              <div class="work-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h2 class="w-title">Banco Santander</h2>
+                    <div class="w-more">
+                      <span class="w-ctegory">junior IT system administrator</span> / <span class="w-date">March
+                        2022 - present
+                      </span>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="w-like">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <button style="z-index: -99999;" class="general-centered-BTN">See more</button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="work-box">
+            <a href="public/assets/photos/webp/santander.webp" data-lightbox="gallery-mf" aria-label="Banco Santander">
               <div class="work-img">
                 <img loading="lazy" src="public/assets/photos/webp/santander.webp" alt="Banco Santander logo"
                   class="img-fluid">
@@ -424,7 +513,7 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="public/assets/photos/webp/hardsoft.webp" data-lightbox="gallery-mf">
+            <a href="public/assets/photos/webp/hardsoft.webp" data-lightbox="gallery-mf" aria-label="Hardsoft-Telekom">
               <div class="work-img">
                 <img loading="lazy" src="public/assets/photos/webp/hardsoft.webp" alt="Hardsoft-Telekom logo"
                   class="img-fluid">
@@ -451,7 +540,7 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="public/assets/photos/webp/free.webp" data-lightbox="gallery-mf">
+            <a href="public/assets/photos/webp/free.webp" data-lightbox="gallery-mf" aria-label="FREELANCER">
               <div class="work-img">
                 <img loading="lazy" src="public/assets/photos/webp/free.webp" alt="Freelancer logo" class="img-fluid">
               </div>
@@ -489,7 +578,7 @@
                 <p class="description lead">
                 </p>
                 <span class="comit"><a href="https://www.linkedin.com/in/jan-kupczyk-0ab483201/" target="_blank"
-                    rel="noopener noreferrer nofollw"><i class="fa fa-linkedin-square" id="LI"></i></a></span>
+                    rel="noopener noreferrer nofollw" aria-label="linkedin profile"><i class="fa-brands fa-linkedin-in" id="LI"></i></a></span>
               </div>
             </div>
             <div class="testimonial-box">
@@ -500,7 +589,18 @@
                 <p class="description lead">
                 </p>
                 <span class="comit"><a href="https://github.com/jankupczyk" target="_blank"
-                    rel="noopener noreferrer nofollw"><i class="fa fa-github" id="GH"></i></a></span>
+                    rel="noopener noreferrer nofollw" aria-label="github profile"><i class="fa-brands fa-github" id="GH"></i></a></span>
+              </div>
+            </div>
+            <div class="testimonial-box">
+              <div class="author-test">
+                <span class="author">GitLab</span>
+              </div>
+              <div class="content-test">
+                <p class="description lead">
+                </p>
+                <span class="comit"><a href="https://about.gitlab.com/" target="_blank"
+                    rel="noopener noreferrer nofollw" aria-label="gitlab profile"><i class="fa-brands fa-gitlab" id="GL"></i></a></span>
               </div>
             </div>
             <div class="testimonial-box">
@@ -511,7 +611,7 @@
                 <p class="description lead">
                 </p>
                 <span class="comit"><a href="https://twitter.com/Jan57965221" target="_blank"
-                    rel="noopener noreferrer nofollw"><i class="fa fa-twitter-square" id="TW"></i></a></span>
+                    rel="noopener noreferrer nofollw" aria-label="twitter profile"><i class="fa-brands fa-twitter" id="TW"></i></a></span>
               </div>
             </div>
             <div class="testimonial-box">
@@ -521,8 +621,7 @@
               <div class="content-test">
                 <p class="description lead">
                 </p>
-                <span class="comit"><a href="Instagram" target="_blank" rel="noopener noreferrer nofollw"><i
-                      class="fa fa-instagram" id="IG"></i></a></span>
+                <span class="comit"><a href="Instagram" target="_blank" rel="noopener noreferrer nofollw" aria-label="instagram profile"><i class="fa-brands fa-instagram" id="IG"></i></a></span>
               </div>
             </div>
             <div class="testimonial-box">
@@ -533,7 +632,18 @@
                 <p class="description lead">
                 </p>
                 <span class="comit"><a href="mailto:kupczykcontact@gmail.com?subject=Website" target="_blank"
-                    rel="noopener noreferrer nofollw"><i class="fa fa-envelope" id="EM"></i></a></span>
+                    rel="noopener noreferrer nofollw" aria-label="send me an email"><i class="fa-solid fa-envelope-open-text" id="EM"></i></a></span>
+              </div>
+            </div>
+            <div class="testimonial-box">
+              <div class="author-test">
+                <span class="author">Website</span>
+              </div>
+              <div class="content-test">
+                <p class="description lead">
+                </p>
+                <span class="comit"><a href="https://kupczyk.netlify.app/" target="_blank"
+                    rel="noopener noreferrer nofollw" aria-label="resume website"><i class="fa-solid fa-arrow-up-right-from-square" id="WB"></i></a></span>
               </div>
             </div>
           </div>
@@ -562,10 +672,7 @@
       <div class="row" id="FRs">
         <div class="col-md-4">
           <div class="card card-blog">
-            <div class="card-img">
-              <a><img loading="lazy" src="public/assets/photos/webp/pr7.webp" alt="Project 7 image" class="img-fluid"
-                  onmouseover="this.src='public/assets/photos/webp/pr7o.webp'"
-                  onmouseout="this.src='public/assets/photos/webp/pr7.webp'"></a>
+            <div class="card-img"><img loading="lazy" src="public/assets/photos/webp/pr3.webp" alt="Project 9 image" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -573,11 +680,10 @@
                   <h6 class="category">APP</h6>
                 </div>
               </div>
-              <h3 class="card-title"><a href="https://github.com/jankupczyk/Calculator" target="_blank"
-                  rel="noopener noreferrer nofollw" id="card">Calculator</a></h3>
-              <p class="card-description">
-                A simple calculator written in python allows you to make simple calculations, write charts, calculate
-                the dates, and exchange currency.
+              <h3 class="card-title"><a href="https://github.com/jankupczyk/VOLAZIP" target="_blank"
+                rel="noopener noreferrer nofollw" id="card VOLAZIP">VOLAZIP</a></h3>
+                <p class="card-description">
+                  📦 VOLAZIP is a powerful tool that allows you to open secured zip, get the hash of any zip, and open unsecured zip.
               </p>
             </div>
             <div class="card-footer">
@@ -591,14 +697,21 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 5 min"></span> 5 min
                 &nbsp;
-                <span class="ion-ios-calendar-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  title="Nov-2021"></span> 27/11/2021
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="12/04/2022"><i class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-python-plain" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYTHON"></span>
                 &nbsp;
                 <span class="devicon-pycharm-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYCHARM"></span>
+                  <!-- &nbsp;
+                  <span class="repo-language-color" style="background-color: #f1e05a"></span>
+                  <span class="repo-language-color" style="background-color: #3572A5"></span> -->
+              </div>
+              <div class="post-status">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
               </div>
             </div>
           </div>
@@ -606,8 +719,146 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a><img loading="lazy" src="public/assets/photos/webp/pr6.webp" alt="Project 6 image"
-                  class="img-fluid"></a>
+              <img loading="lazy" src="public/assets/photos/webp/pr3.webp" alt="Project 9 image" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">APP</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="https://github.com/jankupczyk/PYnema" target="_blank"
+                rel="noopener noreferrer nofollw" id="card PYnema">PYnema</a></h3>
+                <p class="card-description">
+                  🎥 PYnema is a simple UDP server written in python, allows you to watch downloaded videos.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Author - Jan Kupczyk">
+                <a href="https://github.com/jankupczyk" target="_blank" rel="noopener noreferrer nofollw">
+                  <img loading="lazy" src="public/assets/photos/webp/ghme.webp" alt="GitHub avatar"
+                    class="avatar rounded-circle">
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  title="Read in 5 min"></span> 8 min
+                &nbsp;
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="27/12/2021"><i class="fa-solid fa-calendar-plus"></i></span>
+                &nbsp;
+                <span class="devicon-python-plain" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  title="PYTHON"></span>
+                &nbsp;
+                <span class="devicon-pycharm-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  title="PYCHARM"></span>
+              </div>
+              <div class="post-status">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <img loading="lazy" src="public/assets/photos/webp/pr8.webp" alt="Project 8 image" class="img-fluid">
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">APP</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="https://github.com/jankupczyk/Tree-Traversals" target="_blank"
+                rel="noopener noreferrer nofollw" id="card BST">Tree-Traversals (BST)</a></h3>
+                <p class="card-description">
+                  🌲 A simple BST (Binary Search Tree) generator written in python. Useful when we need to create a binary search tree.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Author - Jan Kupczyk">
+                <a href="https://github.com/jankupczyk" target="_blank" rel="noopener noreferrer nofollw">
+                  <img loading="lazy" src="public/assets/photos/webp/ghme.webp" alt="GitHub avatar"
+                    class="avatar rounded-circle">
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  title="Read in 5 min"></span> 4 min
+                &nbsp;
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="23/12/2021"><i class="fa-solid fa-calendar-plus"></i></span>
+                &nbsp;
+                <span class="devicon-python-plain" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  title="PYTHON"></span>
+                &nbsp;
+                <span class="devicon-pycharm-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  title="PYCHARM"></span>
+                  <!-- &nbsp;
+                  <span class="repo-language-color" style="background-color: #f1e05a"></span>
+                  <span class="repo-language-color" style="background-color: #3572A5"></span> -->
+              </div>
+              <div class="post-status">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <img loading="lazy" src="public/assets/photos/webp/pr7.webp" alt="Project 7 image" class="img-fluid"
+                  onmouseover="this.src='public/assets/photos/webp/pr7o.webp'"
+                  onmouseout="this.src='public/assets/photos/webp/pr7.webp'">
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">APP</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="https://github.com/jankupczyk/Calculator" target="_blank"
+                  rel="noopener noreferrer nofollw" id="card Calculator">Calculator</a></h3>
+              <p class="card-description">
+                🧮 A simple calculator written in python allows you to make simple calculations, write charts, calculate
+                the dates.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Author - Jan Kupczyk">
+                <a href="https://github.com/jankupczyk" target="_blank" rel="noopener noreferrer nofollw">
+                  <img loading="lazy" src="public/assets/photos/webp/ghme.webp" alt="GitHub avatar"
+                    class="avatar rounded-circle">
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  title="Read in 5 min"></span> 5 min
+                &nbsp;
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="27/11/2021"><i class="fa-solid fa-calendar-plus"></i></span>
+                &nbsp;
+                <span class="devicon-python-plain" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  title="PYTHON"></span>
+                &nbsp;
+                <span class="devicon-pycharm-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                  title="PYCHARM"></span>
+              </div>
+              <div class="post-status">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <img loading="lazy" src="public/assets/photos/webp/pr6.webp" alt="Project 6 image"
+                  class="img-fluid">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -616,10 +867,10 @@
                 </div>
               </div>
               <h3 class="card-title"><a href="https://jankupczyk.github.io/KUPCZYK/" target="_blank"
-                  rel="noopener noreferrer nofollw" id="card">K U P C Z Y K</a></h3>
+                  rel="noopener noreferrer nofollw" id="card KUPCZYK">K U P C Z Y K</a></h3>
               <p class="card-description">
                 My website, collection of all useful information about me.
-                <br><br>
+                <br>
               </p>
             </div>
             <div class="card-footer">
@@ -633,17 +884,18 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 20 min"></span> 20 min
                 &nbsp;
-                <span class="ion-ios-calendar-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  title="Jul-2021"></span> 07/07/2021
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="07/07/2021"><i class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-html5-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="HTML5"></span>
                 &nbsp;
-                <span class="devicon-jquery-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  title="JQ"></span>
-                &nbsp;
                 <span class="devicon-javascript-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="JS"></span>
+              </div>
+              <div class="post-status">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
               </div>
             </div>
           </div>
@@ -651,8 +903,8 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a><img loading="lazy" src="public/assets/photos/webp/pr1.webp" alt="Project 1 image"
-                  class="img-fluid"></a>
+              <img loading="lazy" src="public/assets/photos/webp/pr1.webp" alt="Project 1 image"
+                  class="img-fluid">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -663,8 +915,7 @@
               <h3 class="card-title"><a href="https://jankupczyk.github.io/Kawaleria-II-RP/" target="_blank"
                   rel="noopener noreferrer nofollw">Kawaleria-II-RP</a></h3>
               <p class="card-description">
-                Taking first place in a competition for a website devoted to historical - social issues, associated
-                with the Polish cavalry.
+                Website devoted to historical - social issues, associated with the Polish cavalry.
               </p>
             </div>
             <div class="card-footer">
@@ -678,17 +929,20 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 10 min"></span> 10 min
                 &nbsp;
-                <span class="ion-ios-calendar-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  title="May-2021"></span> 20/05/2021
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="20/04/2021"><i class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-html5-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="HTML5"></span>
                 &nbsp;
-                <span class="devicon-sass-original colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  title="Sass"></span>
-                &nbsp;
                 <span class="devicon-javascript-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="JS"></span>
+                  &nbsp;
+                  <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Taking 1st place in the contest."><i class="fa-solid fa-award" id="Ist"></i></span>
+              </div>
+              <div class="post-status">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="WAR"></i></span>
               </div>
             </div>
           </div>
@@ -696,9 +950,9 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a><img loading="lazy" src="public/assets/photos/webp/pr2.webp" alt="Project 2 image" class="img-fluid"
+              <img loading="lazy" src="public/assets/photos/webp/pr2.webp" alt="Project 2 image" class="img-fluid"
                   onmouseover="this.src='public/assets/photos/webp/pr2o.webp'"
-                  onmouseout="this.src='public/assets/photos/webp/pr2.webp'"></a>
+                  onmouseout="this.src='public/assets/photos/webp/pr2.webp'">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -709,7 +963,7 @@
               <h3 class="card-title"><a href="https://github.com/jankupczyk/Zombioo" target="_blank"
                   rel="noopener noreferrer nofollw">Zombioo</a></h3>
               <p class="card-description">
-                🧟Zombioo is a simple 2D game, created using Pygame and Python🧟
+                🧟 Zombioo is a simple 2D game, created using Pygame and Python 🧟
                 <br>
               </p>
             </div>
@@ -724,8 +978,8 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 10 min"></span> 10 min
                 &nbsp;
-                <span class="ion-ios-calendar-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  title="Apr-2021"></span> 10/04/2021
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="10/03/2021"><i class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-python-plain" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYTHON"></span>
@@ -733,14 +987,18 @@
                 <span class="devicon-pycharm-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYCHARM"></span>
               </div>
+              <div class="post-status">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a><img loading="lazy" src="public/assets/photos/webp/pr3.webp" alt="Project 3 image"
-                  class="img-fluid"></a>
+              <img loading="lazy" src="public/assets/photos/webp/pr3.webp" alt="Project 3 image"
+                  class="img-fluid">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -766,17 +1024,18 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 15 min"></span> 15 min
                 &nbsp;
-                <span class="ion-ios-calendar-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  title="Mar-2021"></span> 09/03/2021
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="12/02/2021"><i class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-html5-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="HTML5"></span>
                 &nbsp;
-                <span class="devicon-sass-original colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  title="Sass"></span>
-                &nbsp;
                 <span class="devicon-php-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PHP"></span>
+              </div>
+              <div class="post-status">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
               </div>
             </div>
           </div>
@@ -784,8 +1043,8 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <a><img loading="lazy" src="public/assets/photos/webp/pr5.webp" alt="Project 5 image"
-                  class="img-fluid"></a>
+              <img loading="lazy" src="public/assets/photos/webp/pr5.webp" alt="Project 5 image"
+                  class="img-fluid">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -794,7 +1053,7 @@
                 </div>
               </div>
               <h3 class="card-title"><a href="https://jankupczyk.github.io/CompleteToolCS/" target="_blank"
-                  rel="noopener noreferrer nofollw" id="card">CompleteToolCS</a></h3>
+                  rel="noopener noreferrer nofollw" id="card CTCS">CompleteToolCS</a></h3>
               <p class="card-description">
                 Simple message generator, generates ready to use commands.
                 <br>
@@ -811,17 +1070,18 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 10 min"></span> 10 min
                 &nbsp;
-                <span class="ion-ios-calendar-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  title="Jun-2021"></span> 26/06/2021
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="26/06/2019"><i class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-html5-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="HTML5"></span>
                 &nbsp;
-                <span class="devicon-sass-original colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                  title="Sass"></span>
-                &nbsp;
                 <span class="devicon-javascript-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="JS"></span>
+              </div>
+              <div class="post-status">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
+                title="Status: Fixed by valve in [/2022/02/37002/] update" class="pr-status"><i class="fa-solid fa-circle-dot" id="NO"></i></span>
               </div>
             </div>
           </div>
@@ -882,7 +1142,7 @@
         <div class="col-md-12">
           <div class="work-box">
             <div class="work-content">
-              <a href="public/assets/photos/webp/wsbp.webp" data-lightbox="gallery-mf">
+              <a href="public/assets/photos/webp/wsbp.webp" data-lightbox="gallery-mf" aria-label="WSB Poznań">
                 <div class="work-img">
                   <img loading="lazy" src="public/assets/photos/webp/wsbp.webp" alt="WSB Poznań logo" class="img-fluid">
                 </div>
@@ -909,7 +1169,7 @@
         <div class="col-md-12">
           <div class="work-box">
             <div class="work-content">
-              <a href="public/assets/photos/webp/t19.webp" data-lightbox="gallery-mf">
+              <a href="public/assets/photos/webp/t19.webp" data-lightbox="gallery-mf" aria-label="Technikum nr 19">
                 <div class="work-img">
                   <img loading="lazy" src="public/assets/photos/webp/t19.webp" alt="Technikum nr 19" class="img-fluid">
                 </div>
@@ -941,8 +1201,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12" id="resume">
-          <center><a class="button button-a button-big button-rouded" onclick="cvon()">Select CV</a></center>
-          <br>
+          <center><a href="javascript:cvon()" class="button button-a button-big button-rouded" aria-label="Select CV button">Select CV</a></center>
         </div>
       </div>
     </div>
@@ -958,6 +1217,9 @@
               </div>
             </div>
           </div>
+          <p class="credits-made-by">
+            Made with <i id="HRT" class="fa-solid fa-heart"></i> by <a class="credits-made-by-link" href="//github.com/jankupczyk" target="_blank" rel="noopener noreferrer nofollw">jankupczyk</a>
+          </p>
         </div>
       </div>
     </footer>
@@ -967,13 +1229,11 @@
     <div id="progress-bar"></div>
   </div>
 
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <a href="#" class="back-to-down"><i class="fa fa-chevron-down"></i></a>
+  <a href="up" class="back-to-top" aria-label="scroll to top button"><i class="fa-solid fa-chevron-up"></i></a>
+  <a href="down" class="back-to-down" aria-label="scroll down button"><i class="fa-solid fa-chevron-down"></i></a>
   <div id="preloader"></div>
 
   <script src="src/lib/jquery/jquery.min.js"></script>
-  <script src="src/lib/jquery/jquery-migrate.min.js"></script>
   <script src="src/lib/popper/popper.min.js"></script>
   <script src="src/lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="src/lib/easing/easing.min.js"></script>
@@ -989,26 +1249,6 @@
   <script src="src/js/btn.js"></script>
   <script src="src/js/particles.min.js"></script>
   <script src="src/js/particles.js"></script>
-
-  <!-- <script>
-  //   const getallimg = document.querySelectorAll('img')
-  
-  //   const observer = new IntersectionObserver(entries => {
-  //     entries.forEach(entry => {
-  //       entry.target.src = entry.target.getAttribute("data-src");
-  //       if (entry.isIntersecting) observer.unobserve(entry.target)
-  //     })
-  //   },
-  //   {
-  //     threshold: 1,
-  //     rootMargin: "-75px",
-  //   }
-  //   )
-  
-  //   getallimg.forEach(getallimg => {
-  //     observer.observe(getallimg)
-  //   })
-  // </script> -->
 
 </body>
 

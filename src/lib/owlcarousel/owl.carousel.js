@@ -3015,6 +3015,7 @@
 		if (!settings.dotsData) {
 			this._templates = [ $('<button role="button">')
 				.addClass(settings.dotClass)
+				.setAttribute('aria-label', 'slide-dot')
 				.append($('<span>'))
 				.prop('outerHTML') ];
 		}

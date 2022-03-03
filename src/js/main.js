@@ -177,8 +177,6 @@ $(function () {
 	});
 });
 
-
-
 function search_bar_wrk() {
 	let input = document.getElementById('inputed').value
 	input = input.toLowerCase();
@@ -198,3 +196,7 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 	return new bootstrap.Tooltip(tooltipTriggerEl)
 })
+
+function love() {
+	
+}

@@ -52,7 +52,7 @@ function HTsmbtn() {
             '<li>Documentation of orders</li>' +
             '<li>Test and diagnostics of the network</li>' +
             '<br>' +
-            '<span class="w-date" style="color: crimson; font-size: .8rem;">May 2019 - June2019 ◂ 2 months</span>',
+            '<span class="w-date" style="color: crimson; font-size: .8rem;">May 2019 - June 2019 ◂ 2 months</span>',
         focusConfirm: false,
     })
 }
