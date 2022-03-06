@@ -34,7 +34,7 @@
   <link href="src/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <link href="src/css/style.css" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link href="src/lib/animate/animate.min.css" rel="stylesheet">
@@ -48,54 +48,56 @@
 <body>
   <noscript>You need to enable JavaScript to run this app!</noscript>
   <a href="#about" class="scope-focus-btn" tabindex="1">SKIP NAVIGATION</a>
-  <a href="#accessibilityBar" class="scope-focus-btn" tabindex="2" onclick="accessibilityBar.classList.toggle('active')">ACCESSIBILITY</a>
-  <a href="https://github.com/jankupczyk/KUPCZYK/issues" class="scope-focus-btn" tabindex="3" target="_blank" rel="noopener noreferrer nofollw">YOUR OPINION</a>
+  <a href="#accessibilityBar" class="scope-focus-btn" tabindex="2"
+    onclick="accessibilityBar.classList.toggle('active')">ACCESSIBILITY</a>
+  <a href="https://github.com/jankupczyk/KUPCZYK/issues" class="scope-focus-btn" tabindex="3" target="_blank"
+    rel="noopener noreferrer nofollw">YOUR OPINION</a>
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container" id="cont">
       <a class="navbar-brand js-scroll" href="index.html">Kupczyk</a>
 
       <script>
-              if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("/src/js/service-worker.js")
-          .then(function (registration) {
-            console.log(
-              "Service-Worker registration was successful with scope -> ",
-              registration.scope
-            );
-          })
-          .catch(function (err) {
-            console.log("Service-Worker registration failed -> ", err);
-          });
-      }
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("/src/js/service-worker.js")
+            .then(function (registration) {
+              console.log(
+                "Service-Worker registration was successful with scope -> ",
+                registration.scope
+              );
+            })
+            .catch(function (err) {
+              console.log("Service-Worker registration failed -> ", err);
+            });
+        }
       </script>
 
-    <script>
-    try{
-      const images = document.querySelectorAll("img");
-      
-      const imgOptions = {};
-      const imgObserver = new IntersectionObserver((entries, imgObserver) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const img = entry.target;
-          imgObserver.unobserve(entry.target);
-        });
-      }, imgOptions);
-      
-      images.forEach((img) => {
-        imgObserver.observe(img);
-      });
-      console.log('IntersectionObserver activated!')
-      }
-      catch{
-        console.log('IntersectionObserver encounter error')
-      }
-      
+      <script>
+        try {
+          const images = document.querySelectorAll("img");
+
+          const imgOptions = {};
+          const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              const img = entry.target;
+              imgObserver.unobserve(entry.target);
+            });
+          }, imgOptions);
+
+          images.forEach((img) => {
+            imgObserver.observe(img);
+          });
+          console.log('IntersectionObserver activated!')
+        }
+        catch {
+          console.log('IntersectionObserver encounter error')
+        }
+
       </script>
 
       <script type="module">
-        import {icons} from "./src/js/icons.js";
+        import { icons } from "./src/js/icons.js";
 
         const DateTime = new Date();
         const container = document.querySelector("#cont a");
@@ -106,11 +108,11 @@
           icon = icons.tree;
         } else if (DateTime.getMonth() == 1) { //luty
           icon = icons.dragon;
-        }else if (DateTime.getMonth() == 2){
+        } else if (DateTime.getMonth() == 2) {
           icon = icons.ua;
         } else if (DateTime.getMonth() == 3 || DateTime.getMonth() == 4) { //kwiecien i maj
           icon = icons.egg;
-        } else if (DateTime.getMonth() == 5 || DateTime.getMonth() == 6){ //czerwiec
+        } else if (DateTime.getMonth() == 5 || DateTime.getMonth() == 6) { //czerwiec
           icon = icons.sun;
         } else if (DateTime.getMonth() == 9) { //pazdziernik
           icon = icons.ghost;
@@ -169,7 +171,8 @@
               |DBA|, Web Designer, IT
               specialist, Web Developer</span><strong class="text-slider"></strong></p>
           <div class="gif-player">
-            <a href="stop-gif" class="stop-gif-reduce" aria-label="stop gif"></a></div>
+            <a href="stop-gif" class="stop-gif-reduce" aria-label="stop gif"></a>
+          </div>
           <div class="scroll-div-mouse">
             <a href="scroll-down" class="scroll-down" aria-label="scroll down button"></a>
           </div>
@@ -578,7 +581,8 @@
                 <p class="description lead">
                 </p>
                 <span class="comit"><a href="https://www.linkedin.com/in/jan-kupczyk-0ab483201/" target="_blank"
-                    rel="noopener noreferrer nofollw" aria-label="linkedin profile"><i class="fa-brands fa-linkedin-in" id="LI"></i></a></span>
+                    rel="noopener noreferrer nofollw" aria-label="linkedin profile"><i class="fa-brands fa-linkedin-in"
+                      id="LI"></i></a></span>
               </div>
             </div>
             <div class="testimonial-box">
@@ -589,7 +593,8 @@
                 <p class="description lead">
                 </p>
                 <span class="comit"><a href="https://github.com/jankupczyk" target="_blank"
-                    rel="noopener noreferrer nofollw" aria-label="github profile"><i class="fa-brands fa-github" id="GH"></i></a></span>
+                    rel="noopener noreferrer nofollw" aria-label="github profile"><i class="fa-brands fa-github"
+                      id="GH"></i></a></span>
               </div>
             </div>
             <div class="testimonial-box">
@@ -600,7 +605,8 @@
                 <p class="description lead">
                 </p>
                 <span class="comit"><a href="https://about.gitlab.com/" target="_blank"
-                    rel="noopener noreferrer nofollw" aria-label="gitlab profile"><i class="fa-brands fa-gitlab" id="GL"></i></a></span>
+                    rel="noopener noreferrer nofollw" aria-label="gitlab profile"><i class="fa-brands fa-gitlab"
+                      id="GL"></i></a></span>
               </div>
             </div>
             <div class="testimonial-box">
@@ -611,7 +617,8 @@
                 <p class="description lead">
                 </p>
                 <span class="comit"><a href="https://twitter.com/Jan57965221" target="_blank"
-                    rel="noopener noreferrer nofollw" aria-label="twitter profile"><i class="fa-brands fa-twitter" id="TW"></i></a></span>
+                    rel="noopener noreferrer nofollw" aria-label="twitter profile"><i class="fa-brands fa-twitter"
+                      id="TW"></i></a></span>
               </div>
             </div>
             <div class="testimonial-box">
@@ -621,7 +628,8 @@
               <div class="content-test">
                 <p class="description lead">
                 </p>
-                <span class="comit"><a href="Instagram" target="_blank" rel="noopener noreferrer nofollw" aria-label="instagram profile"><i class="fa-brands fa-instagram" id="IG"></i></a></span>
+                <span class="comit"><a href="Instagram" target="_blank" rel="noopener noreferrer nofollw"
+                    aria-label="instagram profile"><i class="fa-brands fa-instagram" id="IG"></i></a></span>
               </div>
             </div>
             <div class="testimonial-box">
@@ -632,7 +640,8 @@
                 <p class="description lead">
                 </p>
                 <span class="comit"><a href="mailto:kupczykcontact@gmail.com?subject=Website" target="_blank"
-                    rel="noopener noreferrer nofollw" aria-label="send me an email"><i class="fa-solid fa-envelope-open-text" id="EM"></i></a></span>
+                    rel="noopener noreferrer nofollw" aria-label="send me an email"><i
+                      class="fa-solid fa-envelope-open-text" id="EM"></i></a></span>
               </div>
             </div>
             <div class="testimonial-box">
@@ -643,7 +652,8 @@
                 <p class="description lead">
                 </p>
                 <span class="comit"><a href="https://kupczyk.netlify.app/" target="_blank"
-                    rel="noopener noreferrer nofollw" aria-label="resume website"><i class="fa-solid fa-arrow-up-right-from-square" id="WB"></i></a></span>
+                    rel="noopener noreferrer nofollw" aria-label="resume website"><i
+                      class="fa-solid fa-arrow-up-right-from-square" id="WB"></i></a></span>
               </div>
             </div>
           </div>
@@ -672,7 +682,8 @@
       <div class="row" id="FRs">
         <div class="col-md-4">
           <div class="card card-blog">
-            <div class="card-img"><img loading="lazy" src="public/assets/photos/webp/pr3.webp" alt="Project 9 image" class="img-fluid">
+            <div class="card-img"><img loading="lazy" src="public/assets/photos/webp/volazip.webp" alt="Project 9 image"
+                class="img-fluid">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -681,9 +692,10 @@
                 </div>
               </div>
               <h3 class="card-title"><a href="https://github.com/jankupczyk/VOLAZIP" target="_blank"
-                rel="noopener noreferrer nofollw" id="card VOLAZIP">VOLAZIP</a></h3>
-                <p class="card-description">
-                  📦 VOLAZIP is a powerful tool that allows you to open secured zip, get the hash of any zip, and open unsecured zip.
+                  rel="noopener noreferrer nofollw" id="card VOLAZIP">VOLAZIP</a></h3>
+              <p class="card-description">
+                📦 VOLAZIP is a powerful tool that allows you to open secured zip, get the hash of any zip, and open
+                unsecured zip.
               </p>
             </div>
             <div class="card-footer">
@@ -697,21 +709,21 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 5 min"></span> 5 min
                 &nbsp;
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="12/04/2022"><i class="fa-solid fa-calendar-plus"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="12/04/2022"><i
+                    class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-python-plain" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYTHON"></span>
                 &nbsp;
                 <span class="devicon-pycharm-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYCHARM"></span>
-                  <!-- &nbsp;
+                <!-- &nbsp;
                   <span class="repo-language-color" style="background-color: #f1e05a"></span>
                   <span class="repo-language-color" style="background-color: #3572A5"></span> -->
               </div>
               <div class="post-status">
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status: Working" class="pr-status"><i
+                    class="fa-solid fa-circle-dot" id="YES"></i></span>
               </div>
             </div>
           </div>
@@ -728,9 +740,9 @@
                 </div>
               </div>
               <h3 class="card-title"><a href="https://github.com/jankupczyk/PYnema" target="_blank"
-                rel="noopener noreferrer nofollw" id="card PYnema">PYnema</a></h3>
-                <p class="card-description">
-                  🎥 PYnema is a simple UDP server written in python, allows you to watch downloaded videos.
+                  rel="noopener noreferrer nofollw" id="card PYnema">PYnema</a></h3>
+              <p class="card-description">
+                🎥 PYnema is a simple UDP server written in python, allows you to watch downloaded videos.
               </p>
             </div>
             <div class="card-footer">
@@ -744,8 +756,8 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 5 min"></span> 8 min
                 &nbsp;
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="27/12/2021"><i class="fa-solid fa-calendar-plus"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="27/12/2021"><i
+                    class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-python-plain" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYTHON"></span>
@@ -754,8 +766,8 @@
                   title="PYCHARM"></span>
               </div>
               <div class="post-status">
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status: Working" class="pr-status"><i
+                    class="fa-solid fa-circle-dot" id="YES"></i></span>
               </div>
             </div>
           </div>
@@ -772,9 +784,10 @@
                 </div>
               </div>
               <h3 class="card-title"><a href="https://github.com/jankupczyk/Tree-Traversals" target="_blank"
-                rel="noopener noreferrer nofollw" id="card BST">Tree-Traversals (BST)</a></h3>
-                <p class="card-description">
-                  🌲 A simple BST (Binary Search Tree) generator written in python. Useful when we need to create a binary search tree.
+                  rel="noopener noreferrer nofollw" id="card BST">Tree-Traversals (BST)</a></h3>
+              <p class="card-description">
+                🌲 A simple BST (Binary Search Tree) generator written in python. Useful when we need to create a binary
+                search tree.
               </p>
             </div>
             <div class="card-footer">
@@ -788,21 +801,21 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 5 min"></span> 4 min
                 &nbsp;
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="23/12/2021"><i class="fa-solid fa-calendar-plus"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="23/12/2021"><i
+                    class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-python-plain" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYTHON"></span>
                 &nbsp;
                 <span class="devicon-pycharm-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYCHARM"></span>
-                  <!-- &nbsp;
+                <!-- &nbsp;
                   <span class="repo-language-color" style="background-color: #f1e05a"></span>
                   <span class="repo-language-color" style="background-color: #3572A5"></span> -->
               </div>
               <div class="post-status">
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status: Working" class="pr-status"><i
+                    class="fa-solid fa-circle-dot" id="YES"></i></span>
               </div>
             </div>
           </div>
@@ -811,8 +824,8 @@
           <div class="card card-blog">
             <div class="card-img">
               <img loading="lazy" src="public/assets/photos/webp/pr7.webp" alt="Project 7 image" class="img-fluid"
-                  onmouseover="this.src='public/assets/photos/webp/pr7o.webp'"
-                  onmouseout="this.src='public/assets/photos/webp/pr7.webp'">
+                onmouseover="this.src='public/assets/photos/webp/pr7o.webp'"
+                onmouseout="this.src='public/assets/photos/webp/pr7.webp'">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -838,8 +851,8 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 5 min"></span> 5 min
                 &nbsp;
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="27/11/2021"><i class="fa-solid fa-calendar-plus"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="27/11/2021"><i
+                    class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-python-plain" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYTHON"></span>
@@ -848,8 +861,8 @@
                   title="PYCHARM"></span>
               </div>
               <div class="post-status">
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status: Working" class="pr-status"><i
+                    class="fa-solid fa-circle-dot" id="YES"></i></span>
               </div>
             </div>
           </div>
@@ -857,8 +870,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <img loading="lazy" src="public/assets/photos/webp/pr6.webp" alt="Project 6 image"
-                  class="img-fluid">
+              <img loading="lazy" src="public/assets/photos/webp/pr6.webp" alt="Project 6 image" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -884,8 +896,8 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 20 min"></span> 20 min
                 &nbsp;
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="07/07/2021"><i class="fa-solid fa-calendar-plus"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="07/07/2021"><i
+                    class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-html5-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="HTML5"></span>
@@ -894,8 +906,8 @@
                   title="JS"></span>
               </div>
               <div class="post-status">
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status: Working" class="pr-status"><i
+                    class="fa-solid fa-circle-dot" id="YES"></i></span>
               </div>
             </div>
           </div>
@@ -903,8 +915,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <img loading="lazy" src="public/assets/photos/webp/pr1.webp" alt="Project 1 image"
-                  class="img-fluid">
+              <img loading="lazy" src="public/assets/photos/webp/pr1.webp" alt="Project 1 image" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -929,20 +940,21 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 10 min"></span> 10 min
                 &nbsp;
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="20/04/2021"><i class="fa-solid fa-calendar-plus"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="20/04/2021"><i
+                    class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-html5-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="HTML5"></span>
                 &nbsp;
                 <span class="devicon-javascript-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="JS"></span>
-                  &nbsp;
-                  <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Taking 1st place in the contest."><i class="fa-solid fa-award" id="Ist"></i></span>
+                &nbsp;
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Taking 1st place in the contest."><i
+                    class="fa-solid fa-award" id="Ist"></i></span>
               </div>
               <div class="post-status">
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="WAR"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status: Working" class="pr-status"><i
+                    class="fa-solid fa-circle-dot" id="WAR"></i></span>
               </div>
             </div>
           </div>
@@ -951,8 +963,8 @@
           <div class="card card-blog">
             <div class="card-img">
               <img loading="lazy" src="public/assets/photos/webp/pr2.webp" alt="Project 2 image" class="img-fluid"
-                  onmouseover="this.src='public/assets/photos/webp/pr2o.webp'"
-                  onmouseout="this.src='public/assets/photos/webp/pr2.webp'">
+                onmouseover="this.src='public/assets/photos/webp/pr2o.webp'"
+                onmouseout="this.src='public/assets/photos/webp/pr2.webp'">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -978,8 +990,8 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 10 min"></span> 10 min
                 &nbsp;
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="10/03/2021"><i class="fa-solid fa-calendar-plus"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="10/03/2021"><i
+                    class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-python-plain" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="PYTHON"></span>
@@ -988,8 +1000,8 @@
                   title="PYCHARM"></span>
               </div>
               <div class="post-status">
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status: Working" class="pr-status"><i
+                    class="fa-solid fa-circle-dot" id="YES"></i></span>
               </div>
             </div>
           </div>
@@ -997,8 +1009,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <img loading="lazy" src="public/assets/photos/webp/pr3.webp" alt="Project 3 image"
-                  class="img-fluid">
+              <img loading="lazy" src="public/assets/photos/webp/pr3.webp" alt="Project 3 image" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -1024,8 +1035,8 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 15 min"></span> 15 min
                 &nbsp;
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="12/02/2021"><i class="fa-solid fa-calendar-plus"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="12/02/2021"><i
+                    class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-html5-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="HTML5"></span>
@@ -1034,8 +1045,8 @@
                   title="PHP"></span>
               </div>
               <div class="post-status">
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="Status: Working" class="pr-status"><i class="fa-solid fa-circle-dot" id="YES"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Status: Working" class="pr-status"><i
+                    class="fa-solid fa-circle-dot" id="YES"></i></span>
               </div>
             </div>
           </div>
@@ -1043,8 +1054,7 @@
         <div class="col-md-4">
           <div class="card card-blog">
             <div class="card-img">
-              <img loading="lazy" src="public/assets/photos/webp/pr5.webp" alt="Project 5 image"
-                  class="img-fluid">
+              <img loading="lazy" src="public/assets/photos/webp/pr5.webp" alt="Project 5 image" class="img-fluid">
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -1070,8 +1080,8 @@
                 <span class="ion-ios-clock-outline" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="Read in 10 min"></span> 10 min
                 &nbsp;
-                <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="26/06/2019"><i class="fa-solid fa-calendar-plus"></i></span>
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="26/06/2019"><i
+                    class="fa-solid fa-calendar-plus"></i></span>
                 &nbsp;
                 <span class="devicon-html5-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom"
                   title="HTML5"></span>
@@ -1081,7 +1091,8 @@
               </div>
               <div class="post-status">
                 <span data-bs-toggle="tooltip" data-bs-placement="bottom"
-                title="Status: Fixed by valve in [/2022/02/37002/] update" class="pr-status"><i class="fa-solid fa-circle-dot" id="NO"></i></span>
+                  title="Status: Fixed by valve in [/2022/02/37002/] update" class="pr-status"><i
+                    class="fa-solid fa-circle-dot" id="NO"></i></span>
               </div>
             </div>
           </div>
@@ -1201,7 +1212,8 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12" id="resume">
-          <center><a href="javascript:cvon()" class="button button-a button-big button-rouded" aria-label="Select CV button">Select CV</a></center>
+          <center><a href="javascript:cvon()" class="button button-a button-big button-rouded"
+              aria-label="Select CV button">Select CV</a></center>
         </div>
       </div>
     </div>
@@ -1218,7 +1230,8 @@
             </div>
           </div>
           <p class="credits-made-by">
-            Made with <i id="HRT" class="fa-solid fa-heart"></i> by <a class="credits-made-by-link" href="//github.com/jankupczyk" target="_blank" rel="noopener noreferrer nofollw">jankupczyk</a>
+            Made with <i id="HRT" class="fa-solid fa-heart"></i> by <a class="credits-made-by-link"
+              href="//github.com/jankupczyk" target="_blank" rel="noopener noreferrer nofollw">jankupczyk</a>
           </p>
         </div>
       </div>
