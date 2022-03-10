@@ -62,12 +62,12 @@
             .register("/src/js/service-worker.js")
             .then(function (registration) {
               console.log(
-                "Service-Worker registration was successful with scope -> ",
+                "SW: Service-Worker registration was successful with scope -> ",
                 registration.scope
               );
             })
             .catch(function (err) {
-              console.log("Service-Worker registration failed -> ", err);
+              console.log("SW: Service-Worker registration failed -> ", err);
             });
         }
       </script>
@@ -88,10 +88,10 @@
           images.forEach((img) => {
             imgObserver.observe(img);
           });
-          console.log('IntersectionObserver activated!')
+          console.log('ItO: IntersectionObserver activated!')
         }
         catch {
-          console.log('IntersectionObserver encounter error')
+          console.log('ItO: IntersectionObserver encounter error')
         }
 
       </script>
@@ -99,30 +99,36 @@
       <script type="module">
         import { icons } from "./src/js/icons.js";
 
-        const DateTime = new Date();
-        const container = document.querySelector("#cont a");
+        try {
+          const DateTime = new Date();
+          const container = document.querySelector("#cont a");
 
-        let icon = `<span />`;
+          let icon = `<span />`;
 
-        if (DateTime.getMonth() == 11 || DateTime.getMonth() == 0) { //grudzien i styczen
-          icon = icons.tree;
-        } else if (DateTime.getMonth() == 1) { //luty
-          icon = icons.dragon;
-        } else if (DateTime.getMonth() == 2) {
-          icon = icons.ua;
-        } else if (DateTime.getMonth() == 3 || DateTime.getMonth() == 4) { //kwiecien i maj
-          icon = icons.egg;
-        } else if (DateTime.getMonth() == 5 || DateTime.getMonth() == 6) { //czerwiec
-          icon = icons.sun;
-        } else if (DateTime.getMonth() == 9) { //pazdziernik
-          icon = icons.ghost;
-        } else if (DateTime.getMonth() == 10) { //listopad
-          icon = icons.turkey;
-        }; //domyslnie puste <span />
+          if (DateTime.getMonth() == 11 || DateTime.getMonth() == 0) { //grudzien i styczen
+            icon = icons.tree;
+          } else if (DateTime.getMonth() == 1) { //luty
+            icon = icons.dragon;
+          } else if (DateTime.getMonth() == 2) {
+            icon = icons.ua;
+          } else if (DateTime.getMonth() == 3 || DateTime.getMonth() == 4) { //kwiecien i maj
+            icon = icons.egg;
+          } else if (DateTime.getMonth() == 5 || DateTime.getMonth() == 6) { //czerwiec
+            icon = icons.sun;
+          } else if (DateTime.getMonth() == 9) { //pazdziernik
+            icon = icons.ghost;
+          } else if (DateTime.getMonth() == 10) { //listopad
+            icon = icons.turkey;
+          }; //domyslnie puste <span />
 
-        //marzec, lipiec, sierpien, wrzesien
+          //marzec, lipiec, sierpien, wrzesien
 
-        container.insertAdjacentHTML("afterend", icon);
+          container.insertAdjacentHTML("afterend", icon);
+          console.log('MOI: Module_icons imported successfully')
+        }
+        catch {
+          console.log('MOI: Module_icons encounter error')
+        }
       </script>
 
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
@@ -227,7 +233,8 @@
                     </h5>
                   </div>
                   <p class="lead">
-                    Hi, I'm Janek, <span id="my-year"></span> and I'm an junior IT system administrator at Banco Santander, I like to make
+                    Hi, I'm Janek, <span id="my-year"></span> and I'm an junior IT system administrator at Banco
+                    Santander, I like to make
                     new friends and work with
                     them, I'm interested in new technologies, travel, politics, sports and games.
                   </p>

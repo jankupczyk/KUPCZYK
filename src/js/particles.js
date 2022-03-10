@@ -129,5 +129,5 @@ try {
     requestAnimationFrame(update);
 }
 catch {
-    console.log("Particles may not work properly, make sure u have the newest version of the browser!")
+    console.log("PT: Particles may not work properly, make sure u have the newest version of the browser!")
 }

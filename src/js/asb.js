@@ -230,6 +230,7 @@
           return check;
         };
         console.log(`Injected mobile mode... improving optimization ✓`)
+        break;
       case "reset":
         Dark.currentState === true ? Dark.setState(false) : null;
         Contrast.currentState === true ? Contrast.setState(false) : null;
