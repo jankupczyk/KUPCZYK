@@ -9,6 +9,18 @@
 		}
 	})
 
+	function getAgeB(dateString) {
+		var today = new Date();
+		var birthDate = new Date(dateString);
+		var age = today.getFullYear() - birthDate.getFullYear();
+		var m = today.getMonth() - birthDate.getMonth();
+		if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+			age--;
+		}
+		return age;
+	}
+	document.getElementById('my-year').innerHTML = (`I'm ${getAgeB("2001/06/01")} years old `);
+
 	window.onscroll = function () {
 		var winscroll = document.body.scrollTop || document.documentElement.scrollTop;
 		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -177,6 +189,19 @@ $(function () {
 	});
 });
 
+var origTitle = document.title;
+
+function updateToOldTitle() {
+  document.title = origTitle;
+}
+
+function updateToNewTitle() {
+  document.title = 'Come Back';
+}
+
+window.onblur = updateToNewTitle;
+window.onfocus = updateToOldTitle;
+
 function search_bar_wrk() {
 	let input = document.getElementById('inputed').value
 	input = input.toLowerCase();
@@ -196,7 +221,3 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 	return new bootstrap.Tooltip(tooltipTriggerEl)
 })
-
-function love() {
-	
-}

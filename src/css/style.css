@@ -419,15 +419,15 @@ a:hover {
 }
 
 #preloader:before {
-  content: "";
+  content: " ";
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #f2f2f2;
   border-top: 6px solid #2d2d2d;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   -webkit-animation: animate-preloader 1s linear infinite;
   animation: animate-preloader 1s linear infinite;
 }
@@ -1082,6 +1082,7 @@ a:hover {
 }
 
 .testimonial-box .author {
+  background-color: transparent;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
@@ -1166,6 +1167,9 @@ div.card.card-blog::marker {
   top: 6%;
 }
 
+#Ist {
+  color: #0ad042;
+}
 .post-date {
   padding: 7px;
 }
@@ -1182,9 +1186,6 @@ div.card.card-blog::marker {
   color: #ffc107;
 }
 
-#Ist {
-  color: #ffd700;
-}
 
 .post-box,
 .form-comments,
