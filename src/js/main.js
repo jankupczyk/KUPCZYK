@@ -192,15 +192,45 @@ $(function () {
 var origTitle = document.title;
 
 function updateToOldTitle() {
-  document.title = origTitle;
+	document.title = origTitle;
 }
 
 function updateToNewTitle() {
-  document.title = 'Come Back';
+	document.title = 'Come Back!';
 }
 
 window.onblur = updateToNewTitle;
 window.onfocus = updateToOldTitle;
+
+{
+	if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
+		console.log('%c Cached data successful using chrome OPR OPERA', 'color: #BF40BF')
+	}
+	else if (navigator.userAgent.indexOf("Edg") != -1) {
+		console.log('%c Cached data successful using chrome Microsoft Edge!', 'color: #BF40BF');
+	}
+	else if (navigator.userAgent.indexOf("Chrome") != -1) {
+		console.log('%c Cached data successful using Google Chrome!', 'color: #BF40BF');
+	}
+	else if (navigator.userAgent.indexOf("Safari") != -1) {
+		console.log('%c Cached data successful using Apple Safari!', 'color: #BF40BF');
+	}
+	else if (navigator.userAgent.indexOf("Brave") != -1) {
+		console.log('%c Cached data successful using Brave Browser!', 'color: #BF40BF');
+	}
+	else if (navigator.userAgent.indexOf("Firefox") != -1) {
+		console.log('%c Cached data successful using Mozilla Firefox!', 'color: #BF40BF');
+	}
+	else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) {
+		console.log('%c Cached data successful using MSIE!', 'color: #BF40BF');
+	}
+	else {
+		console.log('%c Error occurred while fetching browser data, sorry :( :(', 'color: #EE4B2B');
+	}
+}
+
+window.addEventListener('online', () => console.log('%c Session-Tag: Session is currently online', 'color: #8fe38f'));
+window.addEventListener('offline', () => console.log('%c Session-Tag: Session is currently offline, make sure you have internet connection!', 'color: #EE4B2B'));
 
 function search_bar_wrk() {
 	let input = document.getElementById('inputed').value

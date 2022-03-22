@@ -46,6 +46,7 @@
 </head>
 
 <body>
+  <script>console.log('%c Starting KUPCZYK session...', 'color: #BF40BF');</script>
   <noscript>You need to enable JavaScript to run this app!</noscript>
   <a href="#about" class="scope-focus-btn" tabindex="1">SKIP NAVIGATION</a>
   <a href="#accessibilityBar" class="scope-focus-btn" tabindex="2"
@@ -56,20 +57,23 @@
     <div class="container" id="cont">
       <a class="navbar-brand js-scroll" href="index.html">Kupczyk</a>
 
+      <script src="src/js/service-worker.js"></script>
+
       <script>
         if ("serviceWorker" in navigator) {
           navigator.serviceWorker
             .register("/src/js/service-worker.js")
             .then(function (registration) {
               console.log(
-                "SW: Service-Worker registration was successful with scope -> ",
+                '%c SW: Service-Worker registration was successful with scope -> ', 'color: #8fe38f',
                 registration.scope
               );
             })
             .catch(function (err) {
-              console.log("SW: Service-Worker registration failed -> ", err);
+              console.log('%c SW: Service-Worker registration failed -> ', 'color: #EE4B2B', err);
             });
         }
+        //console.log('%c ' + (window.navigator.onLine ? 'ON' : 'OFF') + 'LINE','color: #8fe38f');
       </script>
 
       <script>
@@ -88,10 +92,10 @@
           images.forEach((img) => {
             imgObserver.observe(img);
           });
-          console.log('ItO: IntersectionObserver activated!')
+          console.log('%c ItO: IntersectionObserver activated!', 'color: #8fe38f')
         }
         catch {
-          console.log('ItO: IntersectionObserver encounter error')
+          console.log('%c ItO: IntersectionObserver encounter error', 'color: #EE4B2B')
         }
 
       </script>
@@ -100,34 +104,33 @@
         import { icons } from "./src/js/icons.js";
 
         try {
-          const DateTime = new Date();
+          const dateTime = new Date();
+          const month = dateTime.getMonth();
           const container = document.querySelector("#cont a");
 
           let icon = `<span />`;
 
-          if (DateTime.getMonth() == 11 || DateTime.getMonth() == 0) { //grudzien i styczen
+          if (month == 11 || month == 0) {
             icon = icons.tree;
-          } else if (DateTime.getMonth() == 1) { //luty
+          } else if (month == 1) {
             icon = icons.dragon;
-          } else if (DateTime.getMonth() == 2) {
+          } else if (month == 2) {
             icon = icons.ua;
-          } else if (DateTime.getMonth() == 3 || DateTime.getMonth() == 4) { //kwiecien i maj
+          } else if (month == 3 || month == 4) {
             icon = icons.egg;
-          } else if (DateTime.getMonth() == 5 || DateTime.getMonth() == 6) { //czerwiec
+          } else if (month == 5 || month == 6 || month == 7) {
             icon = icons.sun;
-          } else if (DateTime.getMonth() == 9) { //pazdziernik
+          } else if (month == 9) {
             icon = icons.ghost;
-          } else if (DateTime.getMonth() == 10) { //listopad
+          } else if (month == 10) {
             icon = icons.turkey;
-          }; //domyslnie puste <span />
-
-          //marzec, lipiec, sierpien, wrzesien
+          }; //empty <span />
 
           container.insertAdjacentHTML("afterend", icon);
-          console.log('MOI: Module_icons imported successfully')
+          console.log('%c MOI: Module_icons imported successfully', 'color: #8fe38f')
         }
         catch {
-          console.log('MOI: Module_icons encounter error')
+          console.log('%c MOI: Module_icons encounter error', 'color: #EE4B2B')
         }
       </script>
 
@@ -173,10 +176,8 @@
       <div class="table-cell">
         <div class="container">
           <h1 class="intro-title mb-4">Jan Kupczyk</h1>
-          <p class="intro-subtitle"><span class="text-slider-items">IT enthusiast,IT system administrator, Web and
-              database administrator
-              |DBA|, Web Developer, IT
-              specialist</span><strong class="text-slider"></strong></p>
+          <p class="intro-subtitle"><span class="text-slider-items">IT enthusiast,IT system
+              administrator,|DBA|</span><strong class="text-slider"></strong></p>
           <div class="gif-player">
             <a href="stop-gif" class="stop-gif-reduce" aria-label="stop gif"></a>
           </div>
@@ -1256,7 +1257,14 @@
   <a href="up" class="back-to-top" aria-label="scroll to top button"><i class="fa-solid fa-chevron-up"></i></a>
   <a href="down" class="back-to-down" aria-label="scroll down button"><i class="fa-solid fa-chevron-down"></i></a>
 
-  <div id="preloader"></div>
+  <div id="preloader">
+    <div id="preloader-info">
+      <b>If you stuck there simply press</b>
+      <div class='keybd_button'>CTRL</div>
+      <b>+</b>
+      <div class='keybd_button'>R</div>
+    </div>
+  </div>
 
   <script src="src/lib/jquery/jquery.min.js"></script>
   <script src="src/lib/popper/popper.min.js"></script>

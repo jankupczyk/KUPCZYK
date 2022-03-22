@@ -30,7 +30,7 @@ try {
                     const networkResponse = await fetch(event.request);
                     return networkResponse;
                 } catch (error) {
-                    console.log(`Fetch failed - redirecting to the offline page - ${CACHE_NAME}` , error);
+                    console.log(`Fetch failed - redirecting to the offline page - ${CACHE_NAME}`, error);
 
                     const cache = await caches.open(CACHE_NAME);
                     const cachedResponse = await cache.match(OFFLINE_URL);
@@ -39,9 +39,8 @@ try {
             })());
         }
     });
-    console.log("Service-Worker is working!")
+    console.log('%c SW: Service-Worker successfully loaded ->', 'color: #8fe38f', CACHE_NAME)
 }
 catch {
-    console.log("Service-Worker error!!!")
+    console.log('%c SW: Service-Worker cannot load ->', 'color: #EE4B2B', CACHE_NAME)
 }
-
