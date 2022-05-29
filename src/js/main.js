@@ -204,10 +204,10 @@ window.onfocus = updateToOldTitle;
 
 {
 	if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
-		console.log('%c Cached data successful using chrome OPR OPERA', 'color: #BF40BF')
+		console.log('%c Cached data successful using OPR OPERA', 'color: #BF40BF')
 	}
 	else if (navigator.userAgent.indexOf("Edg") != -1) {
-		console.log('%c Cached data successful using chrome Microsoft Edge!', 'color: #BF40BF');
+		console.log('%c Cached data successful using Microsoft Edge!', 'color: #BF40BF');
 	}
 	else if (navigator.userAgent.indexOf("Chrome") != -1) {
 		console.log('%c Cached data successful using Google Chrome!', 'color: #BF40BF');
