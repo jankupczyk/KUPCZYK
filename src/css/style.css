@@ -1389,11 +1389,13 @@ footer .credits-made-by {
   bottom: 16px;
   font-size: 10px;
   padding: 10px;
+  animation: changecolor 18s infinite;
 }
 
 footer .credits-made-by-link {
   color: #fff;
   z-index: 9999;
+  animation: changecolor 18s infinite;
 }
 
 #sendmessage {
@@ -1756,6 +1758,51 @@ body::-webkit-scrollbar-thumb {
     -webkit-transform: scale(0.9);
     -ms-transform: scale(0.9);
     transform: scale(0.9);
+  }
+}
+
+@keyframes changecolor {
+  0% {
+    color: white;
+  }
+
+  10% {
+    color: crimson;
+  }
+
+  20% {
+    color: white;
+  }
+
+  30% {
+    color: crimson;
+  }
+
+  40% {
+    color: white;
+  }
+
+  50% {
+    color: crimson;
+  }
+
+  60% {
+    color: white;
+  }
+
+  70% {
+    color: crimson;
+  }
+  80% {
+    color: white;
+  }
+
+  90% {
+    color: crimson;
+  }
+
+  100% {
+    color: white;
   }
 }
 
